@@ -3,22 +3,27 @@ import { Note, Measure, Song } from './types';
 
 const numOfMeasures = 8;
 
+const trebleClef = true;
+
 // temporary dummy data
 const song = {
   title: 'Dummy Data Song',
   composer: 'Ricky Marasigan',
   bpm: 120,
   timeSignature: 4,
-  trebleClef: false,
+  trebleClef,
   measures: [] as Measure[],
 };
 
-for (let i = 1; i < numOfMeasures; i++) {
-  song.measures[i] = {
+for (let i = 0; i < numOfMeasures; i++) {
+  const measure = {
     notes: [],
     timeSignature: 4,
-    measureNumber: i,
+    trebleClef,
+    measureNumber: i + 1,
   };
+  song.measures[i] = measure;
+  console.log(measure)
 }
 
 @Component({

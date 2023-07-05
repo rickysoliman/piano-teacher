@@ -7,6 +7,7 @@ export type Measure = {
   notes: Note[];
   timeSignature: number;
   measureNumber: number,
+  trebleClef: boolean;
 };
 
 export type Song = {

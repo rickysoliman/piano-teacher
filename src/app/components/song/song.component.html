@@ -4,17 +4,8 @@
     <h2 class="song-composer">by {{ song.composer }}</h2>
   </div>
   <div class="song-measures">
-    <ng-container *ngTemplateOutlet="song.trebleClef ? treble : bass"></ng-container>
     <div class="song-measure" *ngFor="let measure of song.measures">
       <app-measure [measureData]="measure"></app-measure>
     </div>
   </div>
 </div>
-
-<ng-template #treble>
-  <img class="treble-clef" src="../../../assets/treble-clef.png">
-</ng-template>
-
-<ng-template #bass>
-  <img class="bass-clef" src="../../../assets/bass-clef.png">
-</ng-template>

@@ -1,22 +1,3 @@
-.treble-clef,
-.bass-clef {
-  width: auto;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: 1;
-}
-
-.treble-clef {
-  height: 130px;
-  transform: translate(-8%, -95%);
-}
-
-.bass-clef {
-  height: 77px;
-  transform: translate(0%, -142%);
-}
-
 .song-wrapper {
   display: flex;
   flex-direction: column;
@@ -46,14 +27,6 @@
     flex-basis: calc(33.33% - 16px); /* Adjust the width for three measures per row */
     max-width: calc(33.33% - 16px); /* Adjust the max-width for three measures per row */
   }
-
-  .treble-clef {
-    transform: translate(-8%, -145%);
-  }
-
-  .bass-clef {
-    transform: translate(0%, -225%);
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -61,27 +34,11 @@
     flex-basis: calc(50% - 16px); /* Adjust the width for two measures per row */
     max-width: calc(50% - 16px); /* Adjust the max-width for two measures per row */
   }
-
-  .treble-clef {
-    transform: translate(-8%, -195%);
-  }
-
-  .bass-clef {
-    transform: translate(0%, -310%);
-  }
 }
 
 @media screen and (max-width: 400px) {
   .song-measure {
     flex-basis: 100%; /* Adjust the width for one measure per row on the smallest screens */
     max-width: 100%; /* Adjust the max-width for one measure per row on the smallest screens */
-  }
-
-  .treble-clef {
-    transform: translate(-8%, -395%);
-  }
-
-  .bass-clef {
-    transform: translate(0%, -650%);
   }
 }

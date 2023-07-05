@@ -1,4 +1,9 @@
 <div class="measure-wrapper">
+  <ng-container *ngIf="measureData.measureNumber === 1">
+    <div class="clef-wrapper">
+      <ng-container *ngTemplateOutlet="measureData.trebleClef ? treble : bass"></ng-container>
+    </div>
+  </ng-container>
   <div class="line"></div>
   <div class="space"></div>
   <div class="line"></div>
@@ -9,3 +14,11 @@
   <div class="space"></div>
   <div class="line"></div>
 </div>
+
+<ng-template #treble>
+  <img class="treble-clef" src="../../../assets/treble-clef.png">
+</ng-template>
+
+<ng-template #bass>
+  <img class="bass-clef" src="../../../assets/bass-clef.png">
+</ng-template>

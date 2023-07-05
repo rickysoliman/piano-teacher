@@ -1,3 +1,29 @@
+.clef-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.treble-clef,
+.bass-clef {
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+}
+
+.treble-clef {
+  height: 130px;
+  transform: translate(-8%, -45%);
+}
+
+.bass-clef {
+  height: 77px;
+  transform: translate(0%, -60%);
+}
+
 .measure-wrapper {
   display: flex;
   flex-direction: column;
@@ -5,6 +31,7 @@
   height: fit-content;
   border-left: 2px solid black;
   border-right: 2px solid black;
+  position: relative;
 }
 
 .line,
