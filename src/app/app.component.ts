@@ -9,7 +9,7 @@ const song = {
   composer: 'Ricky Marasigan',
   bpm: 120,
   timeSignature: 4,
-  trebleClef: true,
+  trebleClef: false,
   measures: [] as Measure[],
 };
 
