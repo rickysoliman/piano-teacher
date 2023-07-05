@@ -7,5 +7,5 @@ import { Song } from 'src/app/types';
   styleUrls: ['./song.component.scss']
 })
 export class SongComponent {
-  @Input() songData!: Song;
+  @Input() song!: Song;
 }

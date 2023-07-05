@@ -8,7 +8,10 @@ const song = {
   bpm: 120,
   timeSignature: 4,
   trebleClef: true,
-  measures: [],
+  measures: new Array(8).fill({
+      timeSignature: 4,
+      notes: [],
+    }),
 };
 
 @Component({

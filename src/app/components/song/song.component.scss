@@ -4,3 +4,40 @@
   align-items: center;
   justify-content: center;
 }
+
+.song-measures {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  width: 90vw;
+  max-width: 100%;
+}
+
+.song-measure {
+  flex-basis: calc(20% - 16px); /* Adjust the width based on the maximum number of measures per row */
+  max-width: calc(20% - 16px); /* Adjust the max-width based on the maximum number of measures per row */
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 800px) {
+  .song-measure {
+    flex-basis: calc(25% - 16px); /* Adjust the width for four measures per row on smaller screens */
+    max-width: calc(25% - 16px); /* Adjust the max-width for four measures per row on smaller screens */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .song-measure {
+    flex-basis: calc(33.33% - 16px); /* Adjust the width for three measures per row on even smaller screens */
+    max-width: calc(33.33% - 16px); /* Adjust the max-width for three measures per row on even smaller screens */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .song-measure {
+    flex-basis: calc(50% - 16px); /* Adjust the width for two measures per row on the smallest screens */
+    max-width: calc(50% - 16px); /* Adjust the max-width for two measures per row on the smallest screens */
+  }
+}
