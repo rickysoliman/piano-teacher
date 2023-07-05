@@ -1,4 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Note, Measure, Song } from './types';
+
+// temporary dummy data
+const song = {
+  title: 'Dummy Data Song',
+  composer: 'Ricky Marasigan',
+  bpm: 120,
+  timeSignature: 4,
+  trebleClef: true,
+  measures: [],
+};
 
 @Component({
   selector: 'app-root',
@@ -6,5 +17,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'piano-teacher';
+  song = song;
 }
