@@ -5,14 +5,15 @@ export type Note = {
 
 export type Measure = {
   notes: Note[];
-  timeSignature: number; // should only be 4 or 3
+  timeSignature: number;
+  measureNumber: number,
 };
 
 export type Song = {
   title: string;
   composer: string;
   bpm: number;
-  timeSignature: number; // should only be 4 or 3
+  timeSignature: number;
   trebleClef: boolean;
   measures: Measure[];
 };
