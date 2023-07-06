@@ -1,6 +1,7 @@
 export type Note = {
   duration: 4 | 2 | 1; // whole note, half note, quarter note
-  name: 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G';
+  name: string; // must be capital A - G
+  octave: number;
 };
 
 export type Measure = {

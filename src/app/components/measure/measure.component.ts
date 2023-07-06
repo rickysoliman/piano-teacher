@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Measure } from 'src/app/types';
+import { Measure, Note } from 'src/app/types';
 
 @Component({
   selector: 'app-measure',
@@ -8,4 +8,31 @@ import { Measure } from 'src/app/types';
 })
 export class MeasureComponent {
   @Input() measureData!: Measure;
+
+  ngOnInit() {
+    console.log({ measureData: this.measureData });
+  }
+
+  getNotePosition(note: Note): string {
+    const nameAndOctave = note.name + note.octave;
+    console.log({ nameAndOctave });
+    const linePositionMap: Partial<Record<Note['name'], string>> = {
+      'E4': '24px',
+      'G4': '3px',
+      'B4': '-19px',
+      'D5': '80px',
+      'F5': '100px',
+    };
+
+    const spacePositionMap: Partial<Record<Note['name'], string>> = {
+      'F4': '14px',
+      'A4': '-8px',
+      'C5': '-30px',
+      'E5': '70px',
+    };
+
+    const position = linePositionMap[nameAndOctave] || spacePositionMap[nameAndOctave];
+
+    return position || '0';
+  }
 }

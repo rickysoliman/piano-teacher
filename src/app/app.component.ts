@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Note, Measure, Song } from './types';
 
-const numOfMeasures = 8;
+const numOfMeasures = 2;
 
 const trebleClef = true;
 
@@ -17,10 +17,31 @@ const song = {
 
 for (let i = 0; i < numOfMeasures; i++) {
   const measure = {
-    notes: [],
     timeSignature: 4,
     trebleClef,
     measureNumber: i + 1,
+    notes: [
+      {
+        duration: 1,
+        name: 'C',
+        octave: 5,
+      },
+      {
+        duration: 1,
+        name: 'B',
+        octave: 4,
+      },
+      {
+        duration: 1,
+        name: 'A',
+        octave: 4,
+      },
+      {
+        duration: 1,
+        name: 'G',
+        octave: 4,
+      },
+    ] as Note[],
   };
   song.measures[i] = measure;
 }

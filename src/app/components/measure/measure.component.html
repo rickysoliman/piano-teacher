@@ -4,15 +4,18 @@
       <ng-container *ngTemplateOutlet="measureData.trebleClef ? treble : bass"></ng-container>
     </div>
   </ng-container>
-  <div class="line"></div>
-  <div class="space"></div>
-  <div class="line"></div>
-  <div class="space"></div>
-  <div class="line"></div>
-  <div class="space"></div>
-  <div class="line"></div>
-  <div class="space"></div>
-  <div class="line"></div>
+  <div class="note-container">
+    <img *ngFor="let note of measureData.notes" class="quarter-note" [style.top]="getNotePosition(note)" src="../../../assets/quarter-note.png">
+  </div>
+  <div [id]="measureData.trebleClef ? 'F5' : 'A3'" class="line"></div>
+  <div [id]="measureData.trebleClef ? 'E5' : 'G3'" class="space"></div>
+  <div [id]="measureData.trebleClef ? 'D5' : 'F3'" class="line"></div>
+  <div [id]="measureData.trebleClef ? 'C5' : 'E3'" class="space"></div>
+  <div [id]="measureData.trebleClef ? 'B4' : 'D3'" class="line"></div>
+  <div [id]="measureData.trebleClef ? 'A4' : 'C3'" class="space"></div>
+  <div [id]="measureData.trebleClef ? 'G4' : 'B2'" class="line"></div>
+  <div [id]="measureData.trebleClef ? 'F4' : 'A2'" class="space"></div>
+  <div [id]="measureData.trebleClef ? 'E4' : 'G2'" class="line"></div>
 </div>
 
 <ng-template #treble>
