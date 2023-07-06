@@ -37,7 +37,7 @@
 .line,
 .space {
   box-sizing: border-box;
-  transition: box-shadow 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .line {
@@ -47,7 +47,7 @@
 }
 .line:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 5px 5px rgba(80, 254, 80, 0.59);
+  background-color: rgba(80, 254, 80, 0.59);
 }
 
 .space {
@@ -57,5 +57,5 @@
 }
 .space:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 5px 5px rgba(80, 254, 80, 0.59);
+  background-color: rgba(80, 254, 80, 0.59);
 }

@@ -23,7 +23,6 @@ for (let i = 0; i < numOfMeasures; i++) {
     measureNumber: i + 1,
   };
   song.measures[i] = measure;
-  console.log(measure)
 }
 
 @Component({
