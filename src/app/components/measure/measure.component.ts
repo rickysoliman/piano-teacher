@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Measure, Note } from 'src/app/types';
+import { Measure, Note, NoteOrRestData, Rest } from 'src/app/types';
 
 @Component({
   selector: 'app-measure',
@@ -8,9 +8,22 @@ import { Measure, Note } from 'src/app/types';
 })
 export class MeasureComponent {
   @Input() measureData!: Measure;
+  noteData: any = {};
 
   ngOnInit() {
     console.log({ measureData: this.measureData });
+
+    this.measureData.notes.forEach(note => {
+      const id = note.name + note.octave;
+      if (!this.noteData[id]) {
+        this.noteData[id] = [];
+      }
+      this.noteData[id].push({
+        duration: note.duration,
+        beat: note.beat,
+      });
+    });
+    console.log({ noteData: this.noteData });
   }
 
   getNotePosition(note: Note): string {

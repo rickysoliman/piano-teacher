@@ -25,21 +25,25 @@ for (let i = 0; i < numOfMeasures; i++) {
         duration: 1,
         name: 'C',
         octave: 5,
+        beat: 1,
       },
       {
         duration: 1,
         name: 'B',
         octave: 4,
+        beat: 2,
       },
       {
         duration: 1,
-        name: 'A',
-        octave: 4,
+        name: 'C',
+        octave: 5,
+        beat: 3,
       },
       {
         duration: 1,
         name: 'G',
         octave: 4,
+        beat: 4,
       },
     ] as Note[],
   };

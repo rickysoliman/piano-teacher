@@ -4,18 +4,16 @@
       <ng-container *ngTemplateOutlet="measureData.trebleClef ? treble : bass"></ng-container>
     </div>
   </ng-container>
-  <div class="note-container">
-    <img *ngFor="let note of measureData.notes" class="quarter-note" [style.top]="getNotePosition(note)" src="../../../assets/quarter-note.png">
-  </div>
-  <div [id]="measureData.trebleClef ? 'F5' : 'A3'" class="line"></div>
-  <div [id]="measureData.trebleClef ? 'E5' : 'G3'" class="space"></div>
-  <div [id]="measureData.trebleClef ? 'D5' : 'F3'" class="line"></div>
-  <div [id]="measureData.trebleClef ? 'C5' : 'E3'" class="space"></div>
-  <div [id]="measureData.trebleClef ? 'B4' : 'D3'" class="line"></div>
-  <div [id]="measureData.trebleClef ? 'A4' : 'C3'" class="space"></div>
-  <div [id]="measureData.trebleClef ? 'G4' : 'B2'" class="line"></div>
-  <div [id]="measureData.trebleClef ? 'F4' : 'A2'" class="space"></div>
-  <div [id]="measureData.trebleClef ? 'E4' : 'G2'" class="line"></div>
+
+  <app-line [lineData]="{ id: measureData.trebleClef ? 'F5' : 'A3', contents: noteData[measureData.trebleClef ? 'F5' : 'A3'] || null }"></app-line>
+  <app-space [spaceData]="{ id: measureData.trebleClef ? 'E5' : 'G3', contents: noteData[measureData.trebleClef ? 'E5' : 'G3']  || null}"></app-space>
+  <app-line [lineData]="{ id: measureData.trebleClef ? 'D5' : 'F3', contents: noteData[measureData.trebleClef ? 'D5' : 'F3'] || null }"></app-line>
+  <app-space [spaceData]="{ id: measureData.trebleClef ? 'C5' : 'E3', contents: noteData[measureData.trebleClef ? 'C5' : 'E3']  || null}"></app-space>
+  <app-line [lineData]="{ id: measureData.trebleClef ? 'B4' : 'D3', contents: noteData[measureData.trebleClef ? 'B4' : 'D3'] || null }"></app-line>
+  <app-space [spaceData]="{ id: measureData.trebleClef ? 'A4' : 'C3', contents: noteData[measureData.trebleClef ? 'A4' : 'C3']  || null}"></app-space>
+  <app-line [lineData]="{ id: measureData.trebleClef ? 'G4' : 'B2', contents: noteData[measureData.trebleClef ? 'G4' : 'B2'] || null }"></app-line>
+  <app-space [spaceData]="{ id: measureData.trebleClef ? 'F4' : 'A2', contents: noteData[measureData.trebleClef ? 'F4' : 'A2']  || null}"></app-space>
+  <app-line [lineData]="{ id: measureData.trebleClef ? 'E4' : 'G2', contents: noteData[measureData.trebleClef ? 'E4' : 'G2'] || null }"></app-line>
 </div>
 
 <ng-template #treble>

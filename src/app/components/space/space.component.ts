@@ -8,4 +8,8 @@ import { LineOrSpace } from 'src/app/types';
 })
 export class SpaceComponent {
   @Input() spaceData!: LineOrSpace;
+
+  ngOnInit() {
+    console.log({ spaceData: this.spaceData });
+  }
 }
