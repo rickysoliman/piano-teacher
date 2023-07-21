@@ -1,6 +1,5 @@
 <div class="line-wrapper">
-  <div [id]="lineData.id" class="line" *ngFor="let note of getRange(lineData.timeSignature)">
-    <!-- Use *ngIf to conditionally render the quarter note -->
+  <div [id]="lineData.id" [ngClass]="!lineData.ledger ? 'line' : hasQuarterNoteOnBeat(note + 1) ? 'ledger-line-with-note' : 'ledger-line'" *ngFor="let note of getRange(lineData.timeSignature)">
     <img class="quarter-note" *ngIf="hasQuarterNoteOnBeat(note + 1)" src="../../../assets/quarter-note.png">
   </div>
 </div>

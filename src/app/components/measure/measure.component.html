@@ -1,11 +1,22 @@
+<!-- above staff -->
+<div [ngClass]="measureData.measureNumber === 1 ? 'first-measure-wrapper-above-staff' : 'measure-wrapper-above-staff'">
+  <app-line [lineData]="{ id: measureData.trebleClef ? 'A5' : 'C4', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'A5' : 'C4'] || null, ledger: true }"></app-line>
+  <app-space [spaceData]="{ id: measureData.trebleClef ? 'G5' : 'B3', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'G5' : 'B3']  || null, ledger: true }"></app-space>
+</div>
+<!-- main staff -->
 <div [ngClass]="measureData.measureNumber === 1 ? 'first-measure-wrapper' : 'measure-wrapper'">
-  <app-line [lineData]="{ id: measureData.trebleClef ? 'F5' : 'A3', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'F5' : 'A3'] || null }"></app-line>
-  <app-space [spaceData]="{ id: measureData.trebleClef ? 'E5' : 'G3', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'E5' : 'G3']  || null}"></app-space>
-  <app-line [lineData]="{ id: measureData.trebleClef ? 'D5' : 'F3', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'D5' : 'F3'] || null }"></app-line>
-  <app-space [spaceData]="{ id: measureData.trebleClef ? 'C5' : 'E3', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'C5' : 'E3']  || null}"></app-space>
-  <app-line [lineData]="{ id: measureData.trebleClef ? 'B4' : 'D3', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'B4' : 'D3'] || null }"></app-line>
-  <app-space [spaceData]="{ id: measureData.trebleClef ? 'A4' : 'C3', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'A4' : 'C3']  || null}"></app-space>
-  <app-line [lineData]="{ id: measureData.trebleClef ? 'G4' : 'B2', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'G4' : 'B2'] || null }"></app-line>
-  <app-space [spaceData]="{ id: measureData.trebleClef ? 'F4' : 'A2', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'F4' : 'A2']  || null}"></app-space>
-  <app-line [lineData]="{ id: measureData.trebleClef ? 'E4' : 'G2', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'E4' : 'G2'] || null }"></app-line>
+  <app-line [lineData]="{ id: measureData.trebleClef ? 'F5' : 'A3', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'F5' : 'A3'] || null, ledger: false }"></app-line>
+  <app-space [spaceData]="{ id: measureData.trebleClef ? 'E5' : 'G3', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'E5' : 'G3']  || null, ledger: false }"></app-space>
+  <app-line [lineData]="{ id: measureData.trebleClef ? 'D5' : 'F3', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'D5' : 'F3'] || null, ledger: false }"></app-line>
+  <app-space [spaceData]="{ id: measureData.trebleClef ? 'C5' : 'E3', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'C5' : 'E3']  || null, ledger: false }"></app-space>
+  <app-line [lineData]="{ id: measureData.trebleClef ? 'B4' : 'D3', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'B4' : 'D3'] || null, ledger: false }"></app-line>
+  <app-space [spaceData]="{ id: measureData.trebleClef ? 'A4' : 'C3', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'A4' : 'C3']  || null, ledger: false }"></app-space>
+  <app-line [lineData]="{ id: measureData.trebleClef ? 'G4' : 'B2', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'G4' : 'B2'] || null, ledger: false }"></app-line>
+  <app-space [spaceData]="{ id: measureData.trebleClef ? 'F4' : 'A2', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'F4' : 'A2']  || null, ledger: false }"></app-space>
+  <app-line [lineData]="{ id: measureData.trebleClef ? 'E4' : 'G2', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'E4' : 'G2'] || null, ledger: false }"></app-line>
+</div>
+<!-- below staff -->
+<div [ngClass]="measureData.measureNumber === 1 ? 'first-measure-wrapper-below-staff' : 'measure-wrapper-below-staff'">
+  <app-space [spaceData]="{ id: measureData.trebleClef ? 'D4' : 'F2', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'D4' : 'F2']  || null, ledger: true }"></app-space>
+  <app-line [lineData]="{ id: measureData.trebleClef ? 'C4' : 'E2', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'C4' : 'E2'] || null, ledger: true }"></app-line>
 </div>

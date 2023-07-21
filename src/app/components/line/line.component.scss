@@ -1,3 +1,5 @@
+@import '../../../styles.scss';
+
 .line-wrapper {
   display: flex;
 }
@@ -8,8 +10,31 @@
   height: 2px;
   background-color: black;
 }
-
 .line:hover {
+  cursor: pointer;
+  background-color: rgba(80, 254, 80, 0.59);
+}
+
+.ledger-line {
+  position: relative;
+  flex: 1;
+  height: 2px;
+  background-color: transparent;
+}
+.ledger-line:hover {
+  cursor: pointer;
+  background-color: rgba(80, 254, 80, 0.59);
+}
+
+.ledger-line-with-note {
+  box-sizing: border-box;
+  position: relative;
+  flex: 1;
+  height: 2px;
+  background-color: black;
+  border-right: 12px solid $background-color;
+}
+.ledger-line-with-note:hover {
   cursor: pointer;
   background-color: rgba(80, 254, 80, 0.59);
 }

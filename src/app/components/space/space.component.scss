@@ -9,8 +9,20 @@
   box-sizing: border-box;
   position: relative;
 }
-
 .space:hover {
+  cursor: pointer;
+  background-color: rgba(80, 254, 80, 0.59);
+}
+
+.ledger-space {
+  height: 20px;
+  background-color: transparent;
+  z-index: 2;
+  box-sizing: border-box;
+  border-right: none;
+  position: relative;
+}
+.ledger-space:hover {
   cursor: pointer;
   background-color: rgba(80, 254, 80, 0.59);
 }
