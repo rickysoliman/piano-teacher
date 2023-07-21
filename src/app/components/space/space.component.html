@@ -1,7 +1,7 @@
 <div class="space-wrapper">
   <div [id]="spaceData.id" class="space" *ngFor="let note of getRange(spaceData.timeSignature)"
        [ngStyle]="{ 'width': getSpaceWidth(spaceData.timeSignature) }">
+    <!-- Use *ngIf to conditionally render the quarter note -->
+    <img class="quarter-note" *ngIf="hasQuarterNoteOnBeat(note + 1)" src="../../../assets/quarter-note.png">
   </div>
 </div>
-
-<!-- <img class="quarter-note" src="../../../assets/quarter-note.png"> -->

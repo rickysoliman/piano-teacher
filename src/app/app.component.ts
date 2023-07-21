@@ -10,7 +10,7 @@ const song = {
   title: 'Dummy Data Song',
   composer: 'Ricky Marasigan',
   bpm: 120,
-  timeSignature: 5,
+  timeSignature: 4,
   trebleClef,
   measures: [] as Measure[],
 };
@@ -35,8 +35,8 @@ for (let i = 0; i < numOfMeasures; i++) {
       },
       {
         duration: 1,
-        name: 'C',
-        octave: 5,
+        name: 'A',
+        octave: 4,
         beat: 3,
       },
       {

@@ -4,11 +4,21 @@
 
 .space {
   height: 20px;
-  background-color: white;
+  background-color: transparent;
+  z-index: 2;
   box-sizing: border-box;
+  position: relative;
 }
 
 .space:hover {
   cursor: pointer;
   background-color: rgba(80, 254, 80, 0.59);
+}
+
+.quarter-note {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 82px;
 }

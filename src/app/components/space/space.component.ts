@@ -21,4 +21,8 @@ export class SpaceComponent {
     const widthPercentage = 100 / timeSignature;
     return `${widthPercentage}%`;
   }
+
+  hasQuarterNoteOnBeat(beat: any): boolean {
+    return this.spaceData.contents?.some((note) => note['beat'] === beat);
+  }
 }
