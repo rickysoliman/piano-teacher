@@ -13,32 +13,113 @@
   align-content: flex-start;
   width: 90vw;
   max-width: 100%;
+  padding: 40px 0;
 }
 
-.song-measure {
-  flex-basis: calc(25% - 16px); /* Adjust the width for four measures per row */
-  max-width: calc(25% - 16px); /* Adjust the max-width for four measures per row */
+.song-measure, .first-song-measure {
+  flex-basis: calc(25% - 16px);
+  max-width: calc(25% - 16px);
   box-sizing: border-box;
   padding: 20px 0;
 }
 
+.first-app-measure-wrapper {
+  display: flex;
+}
+
+.treble-clef,
+.bass-clef {
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+}
+
+.treble-clef {
+  height: 130px;
+  transform: translate(-8%, -45%);
+}
+
+.bass-clef {
+  height: 77px;
+  transform: translate(0%, -60%);
+}
+
+.line,
+.space {
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+.line:hover {
+  cursor: pointer;
+  background-color: rgba(80, 254, 80, 0.59);
+}
+
+.space {
+  width: 100%;
+  height: 20px;
+  background-color: white;
+}
+.space:hover {
+  cursor: pointer;
+  background-color: rgba(80, 254, 80, 0.59);
+}
+
+.clef-measure-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+  height: fit-content;
+  border-left: 2px solid black;
+  border-right: none;
+  position: relative;
+  margin: 20px 0;
+  box-sizing: border-box;
+}
+
+.clef-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.clef-line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+.clef-space {
+  width: 100%;
+  height: 20px;
+  background-color: transparent;
+}
+
 @media screen and (max-width: 800px) {
   .song-measure {
-    flex-basis: calc(33.33% - 16px); /* Adjust the width for three measures per row */
-    max-width: calc(33.33% - 16px); /* Adjust the max-width for three measures per row */
+    flex-basis: calc(33.33% - 16px);
+    max-width: calc(33.33% - 16px);
   }
 }
 
 @media screen and (max-width: 600px) {
   .song-measure {
-    flex-basis: calc(50% - 16px); /* Adjust the width for two measures per row */
-    max-width: calc(50% - 16px); /* Adjust the max-width for two measures per row */
+    flex-basis: calc(50% - 16px);
+    max-width: calc(50% - 16px);
   }
 }
 
 @media screen and (max-width: 400px) {
   .song-measure {
-    flex-basis: 100%; /* Adjust the width for one measure per row on the smallest screens */
-    max-width: 100%; /* Adjust the max-width for one measure per row on the smallest screens */
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }

@@ -1,47 +1,4 @@
-.clef-wrapper {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-}
-
-.clef-line {
-  width: 100%;
-  height: 2px;
-  background-color: black;
-}
-
-.clef-space {
-  width: 100%;
-  height: 20px;
-  background-color: transparent;
-}
-
-.treble-clef,
-.bass-clef {
-  width: auto;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: 1;
-}
-
-.treble-clef {
-  height: 130px;
-  transform: translate(-8%, -45%);
-}
-
-.bass-clef {
-  height: 77px;
-  transform: translate(0%, -60%);
-}
-
 .first-measure-wrapper {
-  display: flex;
-  width: auto;
-}
-
-.first-measure-staff {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -61,42 +18,6 @@
   border-right: 2px solid black;
   margin-right: -2px;
   position: relative;
-}
-
-.clef-measure-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 70px;
-  height: fit-content;
-  border-left: 2px solid black;
-  border-right: none;
-  position: relative;
-}
-
-.line,
-.space {
-  box-sizing: border-box;
-  transition: background-color 0.2s ease;
-}
-
-.line {
-  width: 100%;
-  height: 2px;
-  background-color: black;
-}
-.line:hover {
-  cursor: pointer;
-  background-color: rgba(80, 254, 80, 0.59);
-}
-
-.space {
-  width: 100%;
-  height: 20px;
-  background-color: white;
-}
-.space:hover {
-  cursor: pointer;
-  background-color: rgba(80, 254, 80, 0.59);
 }
 
 .note-container {
