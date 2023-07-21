@@ -1,20 +1,54 @@
-<div class="measure-wrapper">
-  <ng-container *ngIf="measureData.measureNumber === 1">
-    <div class="clef-wrapper">
-      <ng-container *ngTemplateOutlet="measureData.trebleClef ? treble : bass"></ng-container>
-    </div>
-  </ng-container>
+<ng-container *ngTemplateOutlet="measureData.measureNumber === 1 ? firstMeasure : otherMeasures"></ng-container>
 
-  <app-line [lineData]="{ id: measureData.trebleClef ? 'F5' : 'A3', contents: noteData[measureData.trebleClef ? 'F5' : 'A3'] || null }"></app-line>
-  <app-space [spaceData]="{ id: measureData.trebleClef ? 'E5' : 'G3', contents: noteData[measureData.trebleClef ? 'E5' : 'G3']  || null}"></app-space>
-  <app-line [lineData]="{ id: measureData.trebleClef ? 'D5' : 'F3', contents: noteData[measureData.trebleClef ? 'D5' : 'F3'] || null }"></app-line>
-  <app-space [spaceData]="{ id: measureData.trebleClef ? 'C5' : 'E3', contents: noteData[measureData.trebleClef ? 'C5' : 'E3']  || null}"></app-space>
-  <app-line [lineData]="{ id: measureData.trebleClef ? 'B4' : 'D3', contents: noteData[measureData.trebleClef ? 'B4' : 'D3'] || null }"></app-line>
-  <app-space [spaceData]="{ id: measureData.trebleClef ? 'A4' : 'C3', contents: noteData[measureData.trebleClef ? 'A4' : 'C3']  || null}"></app-space>
-  <app-line [lineData]="{ id: measureData.trebleClef ? 'G4' : 'B2', contents: noteData[measureData.trebleClef ? 'G4' : 'B2'] || null }"></app-line>
-  <app-space [spaceData]="{ id: measureData.trebleClef ? 'F4' : 'A2', contents: noteData[measureData.trebleClef ? 'F4' : 'A2']  || null}"></app-space>
-  <app-line [lineData]="{ id: measureData.trebleClef ? 'E4' : 'G2', contents: noteData[measureData.trebleClef ? 'E4' : 'G2'] || null }"></app-line>
-</div>
+<!-- the first measure -->
+<ng-template #firstMeasure>
+  <div class="first-measure-wrapper">
+    <!-- the clef and the lines / spaces behind it -->
+    <div class="clef-measure-wrapper">
+      <div class="clef-line"></div>
+      <div class="clef-space"></div>
+      <div class="clef-line"></div>
+      <div class="clef-space"></div>
+      <div class="clef-line"></div>
+      <div class="clef-space"></div>
+      <div class="clef-line"></div>
+      <div class="clef-space"></div>
+      <div class="clef-line"></div>
+
+      <div class="clef-wrapper">
+        <ng-container *ngTemplateOutlet="measureData.trebleClef ? treble : bass"></ng-container>
+      </div>
+    </div>
+
+    <!-- the rest of the first measure, notes included -->
+    <div class="first-measure-staff">
+      <app-line [lineData]="{ id: measureData.trebleClef ? 'F5' : 'A3', contents: noteData[measureData.trebleClef ? 'F5' : 'A3'] || null }"></app-line>
+      <app-space [spaceData]="{ id: measureData.trebleClef ? 'E5' : 'G3', contents: noteData[measureData.trebleClef ? 'E5' : 'G3']  || null}"></app-space>
+      <app-line [lineData]="{ id: measureData.trebleClef ? 'D5' : 'F3', contents: noteData[measureData.trebleClef ? 'D5' : 'F3'] || null }"></app-line>
+      <app-space [spaceData]="{ id: measureData.trebleClef ? 'C5' : 'E3', contents: noteData[measureData.trebleClef ? 'C5' : 'E3']  || null}"></app-space>
+      <app-line [lineData]="{ id: measureData.trebleClef ? 'B4' : 'D3', contents: noteData[measureData.trebleClef ? 'B4' : 'D3'] || null }"></app-line>
+      <app-space [spaceData]="{ id: measureData.trebleClef ? 'A4' : 'C3', contents: noteData[measureData.trebleClef ? 'A4' : 'C3']  || null}"></app-space>
+      <app-line [lineData]="{ id: measureData.trebleClef ? 'G4' : 'B2', contents: noteData[measureData.trebleClef ? 'G4' : 'B2'] || null }"></app-line>
+      <app-space [spaceData]="{ id: measureData.trebleClef ? 'F4' : 'A2', contents: noteData[measureData.trebleClef ? 'F4' : 'A2']  || null}"></app-space>
+      <app-line [lineData]="{ id: measureData.trebleClef ? 'E4' : 'G2', contents: noteData[measureData.trebleClef ? 'E4' : 'G2'] || null }"></app-line>
+    </div>
+  </div>
+</ng-template>
+
+<!-- the rest of the measures -->
+<ng-template #otherMeasures>
+  <div class="measure-wrapper">
+    <app-line [lineData]="{ id: measureData.trebleClef ? 'F5' : 'A3', contents: noteData[measureData.trebleClef ? 'F5' : 'A3'] || null }"></app-line>
+    <app-space [spaceData]="{ id: measureData.trebleClef ? 'E5' : 'G3', contents: noteData[measureData.trebleClef ? 'E5' : 'G3']  || null}"></app-space>
+    <app-line [lineData]="{ id: measureData.trebleClef ? 'D5' : 'F3', contents: noteData[measureData.trebleClef ? 'D5' : 'F3'] || null }"></app-line>
+    <app-space [spaceData]="{ id: measureData.trebleClef ? 'C5' : 'E3', contents: noteData[measureData.trebleClef ? 'C5' : 'E3']  || null}"></app-space>
+    <app-line [lineData]="{ id: measureData.trebleClef ? 'B4' : 'D3', contents: noteData[measureData.trebleClef ? 'B4' : 'D3'] || null }"></app-line>
+    <app-space [spaceData]="{ id: measureData.trebleClef ? 'A4' : 'C3', contents: noteData[measureData.trebleClef ? 'A4' : 'C3']  || null}"></app-space>
+    <app-line [lineData]="{ id: measureData.trebleClef ? 'G4' : 'B2', contents: noteData[measureData.trebleClef ? 'G4' : 'B2'] || null }"></app-line>
+    <app-space [spaceData]="{ id: measureData.trebleClef ? 'F4' : 'A2', contents: noteData[measureData.trebleClef ? 'F4' : 'A2']  || null}"></app-space>
+    <app-line [lineData]="{ id: measureData.trebleClef ? 'E4' : 'G2', contents: noteData[measureData.trebleClef ? 'E4' : 'G2'] || null }"></app-line>
+  </div>
+</ng-template>
 
 <ng-template #treble>
   <img class="treble-clef" src="../../../assets/treble-clef.png">

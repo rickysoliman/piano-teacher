@@ -5,6 +5,18 @@
   left: 0;
 }
 
+.clef-line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+.clef-space {
+  width: 100%;
+  height: 20px;
+  background-color: white;
+}
+
 .treble-clef,
 .bass-clef {
   width: auto;
@@ -24,13 +36,40 @@
   transform: translate(0%, -60%);
 }
 
-.measure-wrapper {
+.first-measure-wrapper {
+  display: flex;
+  width: auto;
+}
+
+.first-measure-staff {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: fit-content;
+  border-left: none;
+  border-right: 2px solid black;
+  margin-right: -2px;
+  position: relative;
+}
+
+.measure-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: fit-content;
   border-left: 2px solid black;
   border-right: 2px solid black;
+  margin-right: -2px;
+  position: relative;
+}
+
+.clef-measure-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+  height: fit-content;
+  border-left: 2px solid black;
+  border-right: none;
   position: relative;
 }
 

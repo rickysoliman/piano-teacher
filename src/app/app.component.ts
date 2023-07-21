@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Note, Measure, Song } from './types';
 
-const numOfMeasures = 2;
+const numOfMeasures = 4;
 
 const trebleClef = true;
 
