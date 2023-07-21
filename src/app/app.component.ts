@@ -3,7 +3,7 @@ import { Note, Measure, Song } from './types';
 
 const numOfMeasures = 4;
 
-const trebleClef = true;
+const trebleClef = false;
 
 // temporary dummy data
 const song = {
@@ -23,26 +23,26 @@ for (let i = 0; i < numOfMeasures; i++) {
     notes: [
       {
         duration: 1,
-        name: 'F',
-        octave: 4,
+        name: 'A',
+        octave: 3,
         beat: 1,
       },
       {
         duration: 1,
-        name: 'A',
-        octave: 4,
+        name: 'F',
+        octave: 3,
         beat: 2,
       },
       {
         duration: 1,
-        name: 'C',
-        octave: 5,
+        name: 'D',
+        octave: 3,
         beat: 3,
       },
       {
         duration: 1,
-        name: 'E',
-        octave: 5,
+        name: 'G',
+        octave: 2,
         beat: 4,
       },
     ] as Note[],

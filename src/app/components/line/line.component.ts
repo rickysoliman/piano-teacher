@@ -21,4 +21,8 @@ export class LineComponent {
     const widthPercentage = 100 / timeSignature;
     return `${widthPercentage}%`;
   }
+
+  hasQuarterNoteOnBeat(beat: any): boolean {
+    return this.lineData.contents?.some((note) => note['beat'] === beat);
+  }
 }

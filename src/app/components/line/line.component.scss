@@ -3,7 +3,8 @@
 }
 
 .line {
-  width: 100%;
+  position: relative;
+  flex: 1;
   height: 2px;
   background-color: black;
 }
@@ -11,4 +12,12 @@
 .line:hover {
   cursor: pointer;
   background-color: rgba(80, 254, 80, 0.59);
+}
+
+.quarter-note {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 82px;
 }
