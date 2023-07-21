@@ -14,13 +14,13 @@ export const song: Song = {
       notes: [
         {
           duration: 1,
-          name: 'C',
+          name: 'E',
           octave: 4,
           beat: 1,
         },
         {
           duration: 1,
-          name: 'C',
+          name: 'D',
           octave: 4,
           beat: 2,
         },

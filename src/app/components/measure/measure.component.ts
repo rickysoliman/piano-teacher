@@ -11,7 +11,7 @@ export class MeasureComponent {
   noteData: any = {};
 
   ngOnInit() {
-    console.log({ measureData: this.measureData });
+    // console.log({ measureData: this.measureData });
 
     this.measureData.notes.forEach(note => {
       const id = note.name + note.octave;
@@ -23,12 +23,12 @@ export class MeasureComponent {
         beat: note.beat,
       });
     });
-    console.log({ noteData: this.noteData });
+    // console.log({ noteData: this.noteData });
   }
 
   getNotePosition(note: Note): string {
     const nameAndOctave = note.name + note.octave;
-    console.log({ nameAndOctave });
+    // console.log({ nameAndOctave });
     const linePositionMap: Partial<Record<Note['name'], string>> = {
       'E4': '24px',
       'G4': '3px',

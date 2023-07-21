@@ -32,8 +32,6 @@
   flex: 1;
   height: 2px;
   background-color: black;
-  margin-right: 20px;
-  margin-left: -5px;
 }
 .ledger-line-with-note:hover {
   cursor: pointer;
@@ -46,4 +44,12 @@
   left: 50%;
   transform: translateX(-50%);
   height: 82px;
+}
+
+.half-note {
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 73px;
 }

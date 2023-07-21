@@ -10,7 +10,7 @@ export class SpaceComponent {
   @Input() spaceData!: LineOrSpace;
 
   ngOnInit() {
-    console.log({ spaceData: this.spaceData });
+    // console.log({ spaceData: this.spaceData });
   }
 
   getRange(num: number): number[] {

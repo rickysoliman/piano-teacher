@@ -1,8 +1,7 @@
 export type NoteOrRestData = {
-  [id: string]: {
-    duration: number;
-    beat: number;
-  };
+  id: string;
+  duration: number;
+  beat: number;
 }
 
 export type LineOrSpace = {
