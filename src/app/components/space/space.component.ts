@@ -12,4 +12,13 @@ export class SpaceComponent {
   ngOnInit() {
     console.log({ spaceData: this.spaceData });
   }
+
+  getRange(num: number): number[] {
+    return Array.from({ length: num }, (_, index) => index);
+  }
+
+  getSpaceWidth(timeSignature: number): string {
+    const widthPercentage = 100 / timeSignature;
+    return `${widthPercentage}%`;
+  }
 }

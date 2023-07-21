@@ -10,14 +10,14 @@ const song = {
   title: 'Dummy Data Song',
   composer: 'Ricky Marasigan',
   bpm: 120,
-  timeSignature: 4,
+  timeSignature: 5,
   trebleClef,
   measures: [] as Measure[],
 };
 
 for (let i = 0; i < numOfMeasures; i++) {
   const measure = {
-    timeSignature: 4,
+    timeSignature: song.timeSignature,
     trebleClef,
     measureNumber: i + 1,
     notes: [

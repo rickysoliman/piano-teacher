@@ -1,8 +1,13 @@
+.space-wrapper {
+  display: flex;
+}
+
 .space {
-  width: 100%;
   height: 20px;
   background-color: white;
+  box-sizing: border-box;
 }
+
 .space:hover {
   cursor: pointer;
   background-color: rgba(80, 254, 80, 0.59);

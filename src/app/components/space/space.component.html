@@ -1,1 +1,7 @@
-<div [id]="spaceData.id" class="space"></div>
+<div class="space-wrapper">
+  <div [id]="spaceData.id" class="space" *ngFor="let note of getRange(spaceData.timeSignature)"
+       [ngStyle]="{ 'width': getSpaceWidth(spaceData.timeSignature) }">
+  </div>
+</div>
+
+<!-- <img class="quarter-note" src="../../../assets/quarter-note.png"> -->

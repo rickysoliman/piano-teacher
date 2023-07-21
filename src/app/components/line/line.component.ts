@@ -12,4 +12,13 @@ export class LineComponent {
   ngOnInit() {
     console.log({ lineData: this.lineData });
   }
+
+  getRange(num: number): number[] {
+    return Array.from({ length: num }, (_, index) => index);
+  }
+
+  getLineWidth(timeSignature: number): string {
+    const widthPercentage = 100 / timeSignature;
+    return `${widthPercentage}%`;
+  }
 }

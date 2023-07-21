@@ -1,1 +1,7 @@
-<div [id]="lineData.id" class="line"></div>
+<div class="line-wrapper">
+  <div [id]="lineData.id" class="line" *ngFor="let note of getRange(lineData.timeSignature)"
+       [ngStyle]="{ 'width': getLineWidth(lineData.timeSignature) }">
+  </div>
+</div>
+
+<!-- <img class="quarter-note" src="../../../assets/quarter-note.png"> -->

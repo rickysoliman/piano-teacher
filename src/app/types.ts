@@ -7,6 +7,7 @@ export type NoteOrRestData = {
 
 export type LineOrSpace = {
   id: string; // represents the line or space's note name and octave
+  timeSignature: number;
   contents: NoteOrRestData[];
 };
 
