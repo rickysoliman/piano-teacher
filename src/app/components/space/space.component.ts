@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { LineOrSpace } from 'src/app/types';
+import { LineOrSpace, NoteOrRestData } from 'src/app/types';
 
 @Component({
   selector: 'app-space',
@@ -8,9 +8,24 @@ import { LineOrSpace } from 'src/app/types';
 })
 export class SpaceComponent {
   @Input() spaceData!: LineOrSpace;
+  beatData: any = {};
+  imagePaths: any = {
+    '1': '../../../assets/quarter-note.png',
+    '2': '../../../assets/half-note.png',
+  };
+  noteClasses: any = {
+    '1': 'quarter-note',
+    '2': 'half-note',
+  };
 
   ngOnInit() {
-    // console.log({ spaceData: this.spaceData });
+    console.log({ lineData: this.spaceData });
+    if (this.spaceData.contents) {
+      this.spaceData.contents.forEach((note: NoteOrRestData) => {
+        this.beatData[note.beat] = note.duration;
+      });
+      console.log({ beatData: this.beatData });
+    }
   }
 
   getRange(num: number): number[] {
@@ -22,7 +37,7 @@ export class SpaceComponent {
     return `${widthPercentage}%`;
   }
 
-  hasQuarterNoteOnBeat(beat: any): boolean {
+  hasNoteOnBeat(beat: any): boolean {
     return this.spaceData.contents?.some((note) => note['beat'] === beat);
   }
 }

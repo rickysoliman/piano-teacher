@@ -1,5 +1,6 @@
 .space-wrapper {
   display: flex;
+  position: relative;
 }
 
 .space {
@@ -27,10 +28,31 @@
   background-color: rgba(80, 254, 80, 0.59);
 }
 
+.ledger-space-with-note {
+  box-sizing: border-box;
+  position: relative;
+  flex: 1;
+  height: 20px;
+  background-color: transparent;
+  margin: none;
+}
+.ledger-space-with-note:hover {
+  cursor: pointer;
+  background-color: rgba(80, 254, 80, 0.59);
+}
+
 .quarter-note {
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  bottom: 54px;
+  left: 100%;
+  transform: translateX(-100%);
   height: 82px;
+}
+
+.half-note {
+  position: relative;
+  bottom: 51px;
+  left: 45%;
+  transform: translateX(-50%);
+  height: 73px;
 }

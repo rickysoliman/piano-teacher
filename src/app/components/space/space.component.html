@@ -1,7 +1,5 @@
 <div class="space-wrapper">
-  <div [id]="spaceData.id" class="space" *ngFor="let note of getRange(spaceData.timeSignature)"
-       [ngStyle]="{ 'width': getSpaceWidth(spaceData.timeSignature) }">
-    <!-- Use *ngIf to conditionally render the quarter note -->
-    <img class="quarter-note" *ngIf="hasQuarterNoteOnBeat(note + 1)" src="../../../assets/quarter-note.png">
+  <div [id]="spaceData.id" *ngFor="let beat of getRange(spaceData.timeSignature)" [ngClass]="!spaceData.ledger ? 'space' : hasNoteOnBeat(beat + 1) ? 'ledger-space-with-note' : 'ledger-space'">
+    <img [ngClass]="noteClasses[beatData[beat + 1]]" *ngIf="hasNoteOnBeat(beat + 1)" [src]="imagePaths[beatData[beat + 1]]">
   </div>
 </div>
