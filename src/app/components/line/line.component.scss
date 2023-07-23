@@ -29,9 +29,9 @@
 .ledger-line-with-note {
   box-sizing: border-box;
   position: relative;
-  flex: 1;
   height: 2px;
   background-color: black;
+  flex: 1;
 }
 .ledger-line-with-note:hover {
   cursor: pointer;

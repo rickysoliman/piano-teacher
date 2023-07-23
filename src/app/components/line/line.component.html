@@ -1,5 +1,13 @@
 <div class="line-wrapper">
   <div [id]="lineData.id" *ngFor="let beat of getRange(lineData.timeSignature)" [ngClass]="!lineData.ledger ? 'line' : hasNoteOnBeat(beat + 1) ? 'ledger-line-with-note' : 'ledger-line'">
-    <img [ngClass]="noteClasses[beatData[beat + 1]]" *ngIf="hasNoteOnBeat(beat + 1)" [src]="imagePaths[beatData[beat + 1]]">
+    <ng-template #note>
+      <img [ngClass]="noteClasses[beatData[beat + 1]]" [src]="imagePaths[beatData[beat + 1]]">
+    </ng-template>
+
+    <ng-template #noNote>
+      <div [ngClass]="lineData.ledger ? 'ledger-line' : 'line'"></div>
+    </ng-template>
+
+    <ng-container *ngTemplateOutlet="hasNoteOnBeat(beat + 1) ? note : noNote"></ng-container>
   </div>
 </div>

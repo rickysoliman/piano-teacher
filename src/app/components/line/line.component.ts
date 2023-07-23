@@ -19,12 +19,10 @@ export class LineComponent {
   };
 
   ngOnInit() {
-    console.log({ lineData: this.lineData });
     if (this.lineData.contents) {
       this.lineData.contents.forEach((note: NoteOrRestData) => {
         this.beatData[note.beat] = note.duration;
       });
-      console.log({ beatData: this.beatData });
     }
   }
 

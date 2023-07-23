@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { song } from './dummy-data';
+import { maryHadALittleLamb, cMajorScale } from './dummy-data';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,5 @@ import { song } from './dummy-data';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  song = song;
+  song = cMajorScale;
 }

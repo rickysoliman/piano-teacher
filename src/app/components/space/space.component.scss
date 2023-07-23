@@ -9,6 +9,7 @@
   z-index: 2;
   box-sizing: border-box;
   position: relative;
+  flex: 1;
 }
 .space:hover {
   cursor: pointer;
@@ -22,6 +23,7 @@
   box-sizing: border-box;
   border-right: none;
   position: relative;
+  flex: 1;
 }
 .ledger-space:hover {
   cursor: pointer;
@@ -29,12 +31,12 @@
 }
 
 .ledger-space-with-note {
+  height: 20px;
+  background-color: transparent;
+  z-index: 2;
   box-sizing: border-box;
   position: relative;
   flex: 1;
-  height: 20px;
-  background-color: transparent;
-  margin: none;
 }
 .ledger-space-with-note:hover {
   cursor: pointer;

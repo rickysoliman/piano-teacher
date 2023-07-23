@@ -19,7 +19,7 @@ export class SpaceComponent {
   };
 
   ngOnInit() {
-    console.log({ lineData: this.spaceData });
+    if (this.spaceData.contents !== null) console.log({ spaceData: this.spaceData });
     if (this.spaceData.contents) {
       this.spaceData.contents.forEach((note: NoteOrRestData) => {
         this.beatData[note.beat] = note.duration;
