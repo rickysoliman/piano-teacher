@@ -1,7 +1,17 @@
 <div [ngClass]="lineOrSpaceData.isLine ? 'line-wrapper' : 'space-wrapper'">
   <div [id]="lineOrSpaceData.id" *ngFor="let beat of getRange(lineOrSpaceData.timeSignature)" [ngClass]="!lineOrSpaceData.ledger ? (lineOrSpaceData.isLine ? 'line' : 'space') : hasNoteOnBeat(beat + 1) ? (lineOrSpaceData.isLine ? 'ledger-line-with-note' : 'ledger-space-with-note') : (lineOrSpaceData.isLine ? 'ledger-line' : 'ledger-space')">
     <ng-template #note>
-      <img [ngClass]="noteClasses[beatData[beat + 1]]" [src]="imagePaths[beatData[beat + 1]]">
+      <ng-template #ledgerLineWithNote>
+        <div class="white-space-left"></div>
+        <img [ngClass]="noteClasses[beatData[beat + 1]]" [src]="imagePaths[beatData[beat + 1]]">
+        <div class="white-space-right"></div>
+      </ng-template>
+
+      <ng-template #lineWithNote>
+        <img [ngClass]="noteClasses[beatData[beat + 1]]" [src]="imagePaths[beatData[beat + 1]]">
+      </ng-template>
+
+      <ng-container *ngTemplateOutlet="lineOrSpaceData.isLine && lineOrSpaceData.ledger ? ledgerLineWithNote : lineWithNote"></ng-container>
     </ng-template>
 
     <ng-template #noNote>

@@ -10,6 +10,32 @@
   height: 2px;
 }
 
+.ledger-line {
+  background-color: transparent;
+}
+
+.ledger-line-with-note {
+  position: relative;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.white-space-left, .white-space-right {
+  background-color: $background-color;
+  width: 16px;
+  height: 2px;
+  z-index: 2;
+  position: absolute;
+}
+
+.white-space-left {
+  left: -7px;
+}
+.white-space-right {
+  left: 47px;
+}
+
 .line, .ledger-line-with-note {
   background-color: black;
 }
@@ -33,7 +59,7 @@
 .half-note-line, .half-note-space {
   position: absolute;
   bottom: -12px;
-  left: 50%;
+  left: 55%;
   transform: translateX(-50%);
   height: 73px;
 }
