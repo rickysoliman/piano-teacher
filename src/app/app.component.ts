@@ -7,5 +7,5 @@ import { maryHadALittleLamb, cMajorScale } from './dummy-data';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  song = maryHadALittleLamb;
+  song = cMajorScale;
 }

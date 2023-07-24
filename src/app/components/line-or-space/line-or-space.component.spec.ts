@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LineComponent } from './line.component';
+import { LineOrSpaceComponent } from './line-or-space.component';
 
-describe('LineComponent', () => {
-  let component: LineComponent;
-  let fixture: ComponentFixture<LineComponent>;
+describe('LineOrSpaceComponent', () => {
+  let component: LineOrSpaceComponent;
+  let fixture: ComponentFixture<LineOrSpaceComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LineComponent ]
+      declarations: [ LineOrSpaceComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LineComponent);
+    fixture = TestBed.createComponent(LineOrSpaceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,82 @@
+@import '../../../styles.scss';
+
+.line-wrapper, .space-wrapper {
+  display: flex;
+}
+
+.line, .ledger-line, .ledger-line-with-note {
+  position: relative;
+  flex: 1;
+  height: 2px;
+}
+
+.line, .ledger-line-with-note {
+  background-color: black;
+}
+.line:hover, .ledger-line:hover, .ledger-line-with-note:hover {
+  cursor: pointer;
+  background-color: rgba(80, 254, 80, 0.59);
+}
+
+.quarter-note-line, .quarter-note-space {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 82px;
+}
+
+.quarter-note-space {
+  bottom: -8px;
+}
+
+.half-note-line, .half-note-space {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 73px;
+}
+
+.half-note-space {
+  bottom: -2px;
+}
+
+.space {
+  height: 20px;
+  background-color: transparent;
+  z-index: 2;
+  box-sizing: border-box;
+  position: relative;
+  flex: 1;
+}
+.space:hover, .ledger-space:hover, .ledger-space-with-note:hover {
+  cursor: pointer;
+  background-color: rgba(80, 254, 80, 0.59);
+}
+
+.ledger-space, .ledger-space-with-note {
+  height: 20px;
+  background-color: transparent;
+  z-index: 2;
+  box-sizing: border-box;
+  position: relative;
+  flex: 1;
+}
+
+.ledger-space {
+  border-right: none;
+}
+
+.ledger-space-with-note {
+  height: 20px;
+  background-color: transparent;
+  z-index: 2;
+  box-sizing: border-box;
+  position: relative;
+  flex: 1;
+}
+.ledger-space-with-note:hover {
+  cursor: pointer;
+  background-color: rgba(80, 254, 80, 0.59);
+}

@@ -8,6 +8,7 @@ export type LineOrSpace = {
   id: string; // represents the line or space's note name and octave
   timeSignature: number;
   ledger: boolean; // true if note is outside scope of the staff
+  isLine: boolean; // true if line, false if space
   contents: NoteOrRestData[];
 };
 
