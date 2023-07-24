@@ -1,5 +1,263 @@
 import { Song } from "./types";
 
+export const twinkleTwinkleLittleStar: Song = {
+  title: 'Twinkle, Twinkle, Little Star',
+  composer: 'Traditional',
+  bpm: 100,
+  timeSignature: 4,
+  trebleClef: true,
+  measures: [
+    // Measure 1
+    {
+      timeSignature: 4,
+      trebleClef: true,
+      measureNumber: 1,
+      notes: [
+        { duration: 1, name: 'C', octave: 4, beat: 1 },
+        { duration: 1, name: 'C', octave: 4, beat: 2 },
+        { duration: 1, name: 'G', octave: 4, beat: 3 },
+        { duration: 1, name: 'G', octave: 4, beat: 4 },
+      ],
+    },
+    // Measure 2
+    {
+      timeSignature: 4,
+      trebleClef: true,
+      measureNumber: 2,
+      notes: [
+        { duration: 1, name: 'A', octave: 4, beat: 1 },
+        { duration: 1, name: 'A', octave: 4, beat: 2 },
+        { duration: 2, name: 'G', octave: 4, beat: 3 },
+      ],
+    },
+    // Measure 3
+    {
+      timeSignature: 4,
+      trebleClef: true,
+      measureNumber: 3,
+      notes: [
+        { duration: 1, name: 'F', octave: 4, beat: 1 },
+        { duration: 1, name: 'F', octave: 4, beat: 2 },
+        { duration: 1, name: 'E', octave: 4, beat: 3 },
+        { duration: 1, name: 'E', octave: 4, beat: 4 },
+      ],
+    },
+    // Measure 4
+    {
+      timeSignature: 4,
+      trebleClef: true,
+      measureNumber: 4,
+      notes: [
+        { duration: 1, name: 'D', octave: 4, beat: 1 },
+        { duration: 1, name: 'D', octave: 4, beat: 2 },
+        { duration: 2, name: 'C', octave: 4, beat: 3 },
+      ],
+    },
+    // Measure 5
+    {
+      timeSignature: 4,
+      trebleClef: true,
+      measureNumber: 5,
+      notes: [
+        { duration: 1, name: 'G', octave: 4, beat: 1 },
+        { duration: 1, name: 'G', octave: 4, beat: 2 },
+        { duration: 1, name: 'F', octave: 4, beat: 3 },
+        { duration: 1, name: 'F', octave: 4, beat: 4 },
+      ],
+    },
+    // Measure 6
+    {
+      timeSignature: 4,
+      trebleClef: true,
+      measureNumber: 6,
+      notes: [
+        { duration: 1, name: 'E', octave: 4, beat: 1 },
+        { duration: 1, name: 'E', octave: 4, beat: 2 },
+        { duration: 2, name: 'D', octave: 4, beat: 3 },
+      ],
+    },
+    // Measure 6
+    {
+      timeSignature: 4,
+      trebleClef: true,
+      measureNumber: 6,
+      notes: [
+        { duration: 1, name: 'G', octave: 4, beat: 1 },
+        { duration: 1, name: 'G', octave: 4, beat: 2 },
+        { duration: 1, name: 'F', octave: 4, beat: 3 },
+        { duration: 1, name: 'F', octave: 4, beat: 4 },
+      ],
+    },
+    // Measure 7
+    {
+      timeSignature: 4,
+      trebleClef: true,
+      measureNumber: 7,
+      notes: [
+        { duration: 1, name: 'E', octave: 4, beat: 1 },
+        { duration: 1, name: 'E', octave: 4, beat: 2 },
+        { duration: 2, name: 'D', octave: 4, beat: 3 },
+      ],
+    },
+    // Measure 8
+    {
+      timeSignature: 4,
+      trebleClef: true,
+      measureNumber: 8,
+      notes: [
+        { duration: 1, name: 'C', octave: 4, beat: 1 },
+        { duration: 1, name: 'C', octave: 4, beat: 2 },
+        { duration: 1, name: 'G', octave: 4, beat: 3 },
+        { duration: 1, name: 'G', octave: 4, beat: 4 },
+      ],
+    },
+    // Measure 9
+    {
+      timeSignature: 4,
+      trebleClef: true,
+      measureNumber: 9,
+      notes: [
+        { duration: 1, name: 'A', octave: 4, beat: 1 },
+        { duration: 1, name: 'A', octave: 4, beat: 2 },
+        { duration: 2, name: 'G', octave: 4, beat: 3 },
+      ],
+    },
+    // Measure 10
+    {
+      timeSignature: 4,
+      trebleClef: true,
+      measureNumber: 10,
+      notes: [
+        { duration: 1, name: 'F', octave: 4, beat: 1 },
+        { duration: 1, name: 'F', octave: 4, beat: 2 },
+        { duration: 1, name: 'E', octave: 4, beat: 3 },
+        { duration: 1, name: 'E', octave: 4, beat: 4 },
+      ],
+    },
+    // Measure 11
+    {
+      timeSignature: 4,
+      trebleClef: true,
+      measureNumber: 11,
+      notes: [
+        { duration: 1, name: 'D', octave: 4, beat: 1 },
+        { duration: 1, name: 'D', octave: 4, beat: 2 },
+        { duration: 2, name: 'C', octave: 4, beat: 3 },
+      ],
+    },
+  ],
+};
+
+
+export const greensleeves: Song = {
+  title: 'Greensleeves',
+  composer: 'Traditional',
+  bpm: 80,
+  timeSignature: 3,
+  trebleClef: true,
+  measures: [
+    // Measure 1
+    {
+      timeSignature: 3,
+      trebleClef: true,
+      measureNumber: 1,
+      notes: [
+        { duration: 1, name: 'C', octave: 4, beat: 1 },
+        { duration: 1, name: 'C', octave: 4, beat: 2 },
+        { duration: 1, name: 'C', octave: 4, beat: 3 },
+      ],
+    },
+    // Measure 2
+    {
+      timeSignature: 3,
+      trebleClef: true,
+      measureNumber: 2,
+      notes: [
+        { duration: 1, name: 'D', octave: 4, beat: 1 },
+        { duration: 1, name: 'E', octave: 4, beat: 2 },
+        { duration: 1, name: 'D', octave: 4, beat: 3 },
+      ],
+    },
+    // Measure 3
+    {
+      timeSignature: 3,
+      trebleClef: true,
+      measureNumber: 3,
+      notes: [
+        { duration: 2, name: 'E', octave: 4, beat: 1 },
+        { duration: 1, name: 'C', octave: 4, beat: 3 },
+      ],
+    },
+    // Measure 4
+    {
+      timeSignature: 3,
+      trebleClef: true,
+      measureNumber: 4,
+      notes: [
+        { duration: 1, name: 'E', octave: 4, beat: 1 },
+        { duration: 1, name: 'D', octave: 4, beat: 2 },
+        { duration: 1, name: 'C', octave: 4, beat: 3 },
+      ],
+    },
+    // Measure 5
+    {
+      timeSignature: 3,
+      trebleClef: true,
+      measureNumber: 5,
+      notes: [
+        { duration: 1, name: 'D', octave: 4, beat: 1 },
+        { duration: 1, name: 'E', octave: 4, beat: 2 },
+        { duration: 1, name: 'D', octave: 4, beat: 3 },
+      ],
+    },
+    // Measure 6
+    {
+      timeSignature: 3,
+      trebleClef: true,
+      measureNumber: 6,
+      notes: [
+        { duration: 2, name: 'E', octave: 4, beat: 1 },
+        { duration: 1, name: 'C', octave: 4, beat: 3 },
+      ],
+    },
+    // Measure 7
+    {
+      timeSignature: 3,
+      trebleClef: true,
+      measureNumber: 7,
+      notes: [
+        { duration: 1, name: 'G', octave: 4, beat: 1 },
+        { duration: 1, name: 'F', octave: 4, beat: 2 },
+        { duration: 1, name: 'E', octave: 4, beat: 3 },
+      ],
+    },
+    // Measure 8
+    {
+      timeSignature: 3,
+      trebleClef: true,
+      measureNumber: 8,
+      notes: [
+        { duration: 1, name: 'F', octave: 4, beat: 1 },
+        { duration: 1, name: 'E', octave: 4, beat: 2 },
+        { duration: 1, name: 'D', octave: 4, beat: 3 },
+      ],
+    },
+    // Measure 9
+    {
+      timeSignature: 3,
+      trebleClef: true,
+      measureNumber: 9,
+      notes: [
+        { duration: 2, name: 'E', octave: 4, beat: 1 },
+        { duration: 1, name: 'C', octave: 4, beat: 3 },
+      ],
+    },
+  ],
+};
+
+
+
+
 export const maryHadALittleLamb: Song = {
   title: 'Mary Had a Little Lamb',
   composer: 'Traditional',

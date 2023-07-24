@@ -23,17 +23,17 @@
 
 .white-space-left, .white-space-right {
   background-color: $background-color;
-  width: 16px;
+  width: 25%;
   height: 2px;
   z-index: 2;
   position: absolute;
 }
 
 .white-space-left {
-  left: -7px;
+  left: -10%;
 }
 .white-space-right {
-  left: 47px;
+  left: 80%;
 }
 
 .line, .ledger-line-with-note {
