@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { maryHadALittleLamb, cMajorScale, greensleeves, twinkleTwinkleLittleStar } from './dummy-data';
+import { maryHadALittleLamb, cMajorScale, greensleeves, twinkleTwinkleLittleStar } from './song-data';
 
 @Component({
   selector: 'app-root',

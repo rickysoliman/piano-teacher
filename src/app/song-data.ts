@@ -4,12 +4,12 @@ export const twinkleTwinkleLittleStar: Song = {
   title: 'Twinkle, Twinkle, Little Star',
   composer: 'Traditional',
   bpm: 100,
-  timeSignature: 4,
+  timeSignature: { top: 4, bottom: 4 },
   trebleClef: true,
   measures: [
     // Measure 1
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 1,
       notes: [
@@ -21,7 +21,7 @@ export const twinkleTwinkleLittleStar: Song = {
     },
     // Measure 2
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 2,
       notes: [
@@ -32,7 +32,7 @@ export const twinkleTwinkleLittleStar: Song = {
     },
     // Measure 3
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 3,
       notes: [
@@ -44,7 +44,7 @@ export const twinkleTwinkleLittleStar: Song = {
     },
     // Measure 4
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 4,
       notes: [
@@ -55,7 +55,7 @@ export const twinkleTwinkleLittleStar: Song = {
     },
     // Measure 5
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 5,
       notes: [
@@ -67,7 +67,7 @@ export const twinkleTwinkleLittleStar: Song = {
     },
     // Measure 6
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 6,
       notes: [
@@ -78,7 +78,7 @@ export const twinkleTwinkleLittleStar: Song = {
     },
     // Measure 6
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 6,
       notes: [
@@ -90,7 +90,7 @@ export const twinkleTwinkleLittleStar: Song = {
     },
     // Measure 7
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 7,
       notes: [
@@ -101,7 +101,7 @@ export const twinkleTwinkleLittleStar: Song = {
     },
     // Measure 8
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 8,
       notes: [
@@ -113,7 +113,7 @@ export const twinkleTwinkleLittleStar: Song = {
     },
     // Measure 9
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 9,
       notes: [
@@ -124,7 +124,7 @@ export const twinkleTwinkleLittleStar: Song = {
     },
     // Measure 10
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 10,
       notes: [
@@ -136,7 +136,7 @@ export const twinkleTwinkleLittleStar: Song = {
     },
     // Measure 11
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 11,
       notes: [
@@ -148,17 +148,16 @@ export const twinkleTwinkleLittleStar: Song = {
   ],
 };
 
-
 export const greensleeves: Song = {
   title: 'Greensleeves',
   composer: 'Traditional',
   bpm: 80,
-  timeSignature: 3,
+  timeSignature: { top: 3, bottom: 4 },
   trebleClef: true,
   measures: [
     // Measure 1
     {
-      timeSignature: 3,
+      timeSignature: { top: 3, bottom: 4 },
       trebleClef: true,
       measureNumber: 1,
       notes: [
@@ -169,7 +168,7 @@ export const greensleeves: Song = {
     },
     // Measure 2
     {
-      timeSignature: 3,
+      timeSignature: { top: 3, bottom: 4 },
       trebleClef: true,
       measureNumber: 2,
       notes: [
@@ -180,7 +179,7 @@ export const greensleeves: Song = {
     },
     // Measure 3
     {
-      timeSignature: 3,
+      timeSignature: { top: 3, bottom: 4 },
       trebleClef: true,
       measureNumber: 3,
       notes: [
@@ -190,7 +189,7 @@ export const greensleeves: Song = {
     },
     // Measure 4
     {
-      timeSignature: 3,
+      timeSignature: { top: 3, bottom: 4 },
       trebleClef: true,
       measureNumber: 4,
       notes: [
@@ -201,7 +200,7 @@ export const greensleeves: Song = {
     },
     // Measure 5
     {
-      timeSignature: 3,
+      timeSignature: { top: 3, bottom: 4 },
       trebleClef: true,
       measureNumber: 5,
       notes: [
@@ -212,7 +211,7 @@ export const greensleeves: Song = {
     },
     // Measure 6
     {
-      timeSignature: 3,
+      timeSignature: { top: 3, bottom: 4 },
       trebleClef: true,
       measureNumber: 6,
       notes: [
@@ -222,7 +221,7 @@ export const greensleeves: Song = {
     },
     // Measure 7
     {
-      timeSignature: 3,
+      timeSignature: { top: 3, bottom: 4 },
       trebleClef: true,
       measureNumber: 7,
       notes: [
@@ -233,7 +232,7 @@ export const greensleeves: Song = {
     },
     // Measure 8
     {
-      timeSignature: 3,
+      timeSignature: { top: 3, bottom: 4 },
       trebleClef: true,
       measureNumber: 8,
       notes: [
@@ -244,7 +243,7 @@ export const greensleeves: Song = {
     },
     // Measure 9
     {
-      timeSignature: 3,
+      timeSignature: { top: 3, bottom: 4 },
       trebleClef: true,
       measureNumber: 9,
       notes: [
@@ -262,12 +261,12 @@ export const maryHadALittleLamb: Song = {
   title: 'Mary Had a Little Lamb',
   composer: 'Traditional',
   bpm: 120,
-  timeSignature: 4,
+  timeSignature: { top: 4, bottom: 4 },
   trebleClef: true,
   measures: [
     // Measure 1
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 1,
       notes: [
@@ -279,7 +278,7 @@ export const maryHadALittleLamb: Song = {
     },
     // Measure 2
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 2,
       notes: [
@@ -290,7 +289,7 @@ export const maryHadALittleLamb: Song = {
     },
     // Measure 3
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 3,
       notes: [
@@ -301,7 +300,7 @@ export const maryHadALittleLamb: Song = {
     },
     // Measure 4
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 4,
       notes: [
@@ -312,7 +311,7 @@ export const maryHadALittleLamb: Song = {
     },
     // Measure 5
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 5,
       notes: [
@@ -324,7 +323,7 @@ export const maryHadALittleLamb: Song = {
     },
     // Measure 6
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 6,
       notes: [
@@ -336,7 +335,7 @@ export const maryHadALittleLamb: Song = {
     },
     // Measure 7
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 7,
       notes: [
@@ -348,7 +347,7 @@ export const maryHadALittleLamb: Song = {
     },
     // Measure 8
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 8,
       notes: [
@@ -362,12 +361,12 @@ export const cMajorScale: Song = {
   title: 'Ascending and Descending C Major Scale',
   composer: 'Generated by AI',
   bpm: 120,
-  timeSignature: 4,
+  timeSignature: { top: 4, bottom: 4 },
   trebleClef: true,
   measures: [
     // First bar: Quarter notes ascending C major scale from middle C
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 1,
       notes: [
@@ -379,7 +378,7 @@ export const cMajorScale: Song = {
     },
     // Second bar: Quarter notes continuing ascending C major scale
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 2,
       notes: [
@@ -391,7 +390,7 @@ export const cMajorScale: Song = {
     },
     // Third bar: Quarter notes descending C major scale starting on high C
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 3,
       notes: [
@@ -403,7 +402,7 @@ export const cMajorScale: Song = {
     },
     // Fourth bar: Quarter notes continuing descending C major scale
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 4,
       notes: [
@@ -415,7 +414,7 @@ export const cMajorScale: Song = {
     },
     // Fifth bar: Half notes ascending C major scale from middle C
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 5,
       notes: [
@@ -425,7 +424,7 @@ export const cMajorScale: Song = {
     },
     // Sixth bar: Half notes continuing ascending C major scale
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 6,
       notes: [
@@ -435,7 +434,7 @@ export const cMajorScale: Song = {
     },
     // Seventh bar: Half notes descending C major scale starting on high C
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 7,
       notes: [
@@ -445,7 +444,7 @@ export const cMajorScale: Song = {
     },
     // Eighth bar: Half notes continuing descending C major scale
     {
-      timeSignature: 4,
+      timeSignature: { top: 4, bottom: 4 },
       trebleClef: true,
       measureNumber: 8,
       notes: [

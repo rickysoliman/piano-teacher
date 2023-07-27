@@ -20,6 +20,10 @@
       <div class="clef-wrapper">
         <ng-container *ngTemplateOutlet="song.trebleClef ? treble : bass"></ng-container>
       </div>
+      <div class="time-signature-wrapper">
+        <div class="time-signature-top">{{ song.timeSignature.top }}</div>
+        <div class="time-signature-bottom">{{ song.timeSignature.bottom }}</div>
+      </div>
     </div>
 
     <div [ngClass]="measure.measureNumber === 1 ? 'first-song-measure' : 'song-measure'" *ngFor="let measure of song.measures">

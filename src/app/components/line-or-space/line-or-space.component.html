@@ -1,5 +1,5 @@
 <div [ngClass]="lineOrSpaceData.isLine ? 'line-wrapper' : 'space-wrapper'">
-  <div [id]="lineOrSpaceData.id" *ngFor="let beat of getRange(lineOrSpaceData.timeSignature)" [ngClass]="!lineOrSpaceData.ledger ? (lineOrSpaceData.isLine ? 'line' : 'space') : hasNoteOnBeat(beat + 1) ? (lineOrSpaceData.isLine ? 'ledger-line-with-note' : 'ledger-space-with-note') : (lineOrSpaceData.isLine ? 'ledger-line' : 'ledger-space')">
+  <div [id]="lineOrSpaceData.id" *ngFor="let beat of getRange(lineOrSpaceData.timeSignature.top)" [ngClass]="!lineOrSpaceData.ledger ? (lineOrSpaceData.isLine ? 'line' : 'space') : hasNoteOnBeat(beat + 1) ? (lineOrSpaceData.isLine ? 'ledger-line-with-note' : 'ledger-space-with-note') : (lineOrSpaceData.isLine ? 'ledger-line' : 'ledger-space')">
     <ng-template #note>
       <ng-template #ledgerLineWithNote>
         <div class="white-space-left"></div>
