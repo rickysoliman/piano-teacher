@@ -12,6 +12,7 @@ export class LineOrSpaceComponent {
   imagePaths: any = {
     '1': '../../../assets/quarter-note.png',
     '2': '../../../assets/half-note.png',
+    '4': '../../../assets/whole-note.png',
   };
   noteClasses: any = {};
 
@@ -25,6 +26,7 @@ export class LineOrSpaceComponent {
     this.noteClasses = {
       '1': `quarter-note-${this.lineOrSpaceData.isLine ? 'line' : 'space'}`,
       '2': `half-note-${this.lineOrSpaceData.isLine ? 'line' : 'space'}`,
+      '4': `whole-note-${this.lineOrSpaceData.isLine ? 'line' : 'space'}`,
     };
   }
 

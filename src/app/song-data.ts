@@ -1,5 +1,88 @@
 import { Song } from "./types";
 
+export const wholeNotecMajorScale: Song = {
+  title: 'C Major Scale (Bass Clef)',
+  composer: 'You', // Replace with your name or desired composer
+  bpm: 100,
+  timeSignature: { top: 4, bottom: 4 },
+  trebleClef: false, // Using bass clef now
+  measures: [
+    // Measure 1 - C3
+    {
+      timeSignature: { top: 4, bottom: 4 },
+      trebleClef: false,
+      measureNumber: 1,
+      notes: [
+        { duration: 4, name: 'C', octave: 3, beat: 1 },
+      ],
+    },
+    // Measure 2 - D3
+    {
+      timeSignature: { top: 4, bottom: 4 },
+      trebleClef: false,
+      measureNumber: 2,
+      notes: [
+        { duration: 4, name: 'D', octave: 3, beat: 1 },
+      ],
+    },
+    // Measure 3 - E3
+    {
+      timeSignature: { top: 4, bottom: 4 },
+      trebleClef: false,
+      measureNumber: 3,
+      notes: [
+        { duration: 4, name: 'E', octave: 3, beat: 1 },
+      ],
+    },
+    // Measure 4 - F3
+    {
+      timeSignature: { top: 4, bottom: 4 },
+      trebleClef: false,
+      measureNumber: 4,
+      notes: [
+        { duration: 4, name: 'F', octave: 3, beat: 1 },
+      ],
+    },
+    // Measure 5 - G3
+    {
+      timeSignature: { top: 4, bottom: 4 },
+      trebleClef: false,
+      measureNumber: 5,
+      notes: [
+        { duration: 4, name: 'G', octave: 3, beat: 1 },
+      ],
+    },
+    // Measure 6 - A3
+    {
+      timeSignature: { top: 4, bottom: 4 },
+      trebleClef: false,
+      measureNumber: 6,
+      notes: [
+        { duration: 4, name: 'A', octave: 3, beat: 1 },
+      ],
+    },
+    // Measure 7 - B3
+    {
+      timeSignature: { top: 4, bottom: 4 },
+      trebleClef: false,
+      measureNumber: 7,
+      notes: [
+        { duration: 4, name: 'B', octave: 3, beat: 1 },
+      ],
+    },
+    // Measure 8 - C4
+    {
+      timeSignature: { top: 4, bottom: 4 },
+      trebleClef: false,
+      measureNumber: 8,
+      notes: [
+        { duration: 4, name: 'C', octave: 4, beat: 1 },
+      ],
+    },
+  ],
+};
+
+
 export const twinkleTwinkleLittleStar: Song = {
   title: 'Twinkle, Twinkle, Little Star',
   composer: 'Traditional',

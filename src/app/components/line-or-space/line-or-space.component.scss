@@ -46,10 +46,13 @@
 
 .quarter-note-line, .quarter-note-space {
   position: absolute;
-  bottom: -18px;
   left: 50%;
   transform: translateX(-50%);
   height: 82px;
+}
+
+.quarter-note-line {
+  bottom: -18px;
 }
 
 .quarter-note-space {
@@ -58,13 +61,31 @@
 
 .half-note-line, .half-note-space {
   position: absolute;
-  bottom: -12px;
   left: 55%;
   transform: translateX(-50%);
   height: 73px;
 }
 
+.half-note-line {
+  bottom: -12px;
+}
+
 .half-note-space {
+  bottom: -2px;
+}
+
+.whole-note-line, .whole-note-space {
+  position: absolute;
+  left: 47%;
+  transform: translateX(-50%);
+  height: 25px;
+}
+
+.whole-note-line {
+  bottom: -12px;
+}
+
+.whole-note-space {
   bottom: -2px;
 }
 
