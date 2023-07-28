@@ -41,3 +41,19 @@
   position: absolute;
   bottom: 15px;
 }
+
+.half-rest, .whole-rest {
+  width: 28px;
+  height: 9px;
+  position: absolute;
+}
+
+.half-rest {
+  bottom: 46px;
+  padding-left: 20%;
+}
+
+.whole-rest {
+  bottom: 57px;
+  padding-left: 40%;
+}

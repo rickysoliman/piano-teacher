@@ -10,6 +10,16 @@ export class MeasureComponent {
   @Input() measureData!: Measure;
   noteData: any = {};
   restData: any = [];
+  restImagePaths: any = {
+    '1': '../../../assets/quarter-rest.png',
+    '2': '../../../assets/half-or-whole-rest.png',
+    '4': '../../../assets/half-or-whole-rest.png',
+  };
+  restClasses: any = {
+    '1': 'quarter-rest',
+    '2': 'half-rest',
+    '4': 'whole-rest',
+  };
 
   ngOnInit() {
     this.restData = new Array(this.measureData.timeSignature.top).fill(null);
@@ -29,6 +39,12 @@ export class MeasureComponent {
       }
     });
     console.log({ noteData: this.noteData, restData: this.restData });
+  }
+
+  getRestStyles(index: number): any {
+    return {
+      'left.%': ((100 / this.measureData.timeSignature.top) * index) + 5
+    };
   }
 
   getNotePosition(note: Note): string {

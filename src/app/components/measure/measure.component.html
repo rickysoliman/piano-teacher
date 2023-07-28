@@ -20,9 +20,9 @@
     <div *ngFor="let rest of restData; let i = index">
       <img
         *ngIf="rest !== null"
-        class="quarter-rest"
-        src="../../../assets/quarter-rest.png"
-        [ngStyle]="{ 'left.%': ((100 / measureData.timeSignature.top) * i) + 5 }"
+        [ngClass]="restClasses[rest]"
+        [src]="restImagePaths[rest]"
+        [ngStyle]="getRestStyles(i)"
       >
     </div>
   </div>

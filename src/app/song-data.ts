@@ -1,6 +1,6 @@
 import { Song } from "./types";
 
-export const songWithQuarterRests: Song = {
+export const songWithHalfAndWholeRests: Song = {
   title: 'Quarter Rests',
   composer: 'You', // Replace with your name or desired composer
   bpm: 100,
@@ -12,10 +12,7 @@ export const songWithQuarterRests: Song = {
       trebleClef: true,
       measureNumber: 1,
       notes: [
-        { duration: 1, name: 'C', octave: 4, beat: 1 },
-        { duration: 1, name: 'rest', octave: null, beat: 2 },
-        { duration: 1, name: 'C', octave: 4, beat: 3 },
-        { duration: 1, name: 'rest', octave: null, beat: 4 },
+        { duration: 4, name: 'rest', octave: null, beat: 1 },
       ],
     },
     {
@@ -25,8 +22,7 @@ export const songWithQuarterRests: Song = {
       notes: [
         { duration: 1, name: 'E', octave: 4, beat: 1 },
         { duration: 1, name: 'D', octave: 4, beat: 2 },
-        { duration: 1, name: 'C', octave: 4, beat: 3 },
-        { duration: 1, name: 'rest', octave: null, beat: 4 },
+        { duration: 2, name: 'rest', octave: null, beat: 3 },
       ],
     },
   ],
