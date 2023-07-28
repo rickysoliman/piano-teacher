@@ -19,7 +19,7 @@ export type Rest = {
 export type Note = {
   duration: 4 | 2 | 1; // whole note, half note, quarter note
   name: string; // must be capital A - G
-  octave: number;
+  octave: number | null; // null if rest instead of note
   beat: number;
 };
 

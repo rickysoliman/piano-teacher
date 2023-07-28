@@ -9,18 +9,26 @@ import { Measure, Note, NoteOrRestData, Rest } from 'src/app/types';
 export class MeasureComponent {
   @Input() measureData!: Measure;
   noteData: any = {};
+  restData: any = [];
 
   ngOnInit() {
+    this.restData = new Array(this.measureData.timeSignature.top).fill(null);
+
     this.measureData.notes.forEach(note => {
-      const id = note.name + note.octave;
-      if (!this.noteData[id]) {
-        this.noteData[id] = [];
+      if (note.name === 'rest') {
+        this.restData[note.beat - 1] = note.duration;
+      } else {
+        const id = note.name + note.octave;
+        if (!this.noteData[id]) {
+          this.noteData[id] = [];
+        }
+        this.noteData[id].push({
+          duration: note.duration,
+          beat: note.beat,
+        });
       }
-      this.noteData[id].push({
-        duration: note.duration,
-        beat: note.beat,
-      });
     });
+    console.log({ noteData: this.noteData, restData: this.restData });
   }
 
   getNotePosition(note: Note): string {

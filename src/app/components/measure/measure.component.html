@@ -14,6 +14,18 @@
   <app-line-or-space [lineOrSpaceData]="{ isLine: true, id: measureData.trebleClef ? 'G4' : 'B2', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'G4' : 'B2'] || null, ledger: false }"></app-line-or-space>
   <app-line-or-space [lineOrSpaceData]="{ isLine: false, id: measureData.trebleClef ? 'F4' : 'A2', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'F4' : 'A2']  || null, ledger: false }"></app-line-or-space>
   <app-line-or-space [lineOrSpaceData]="{ isLine: true, id: measureData.trebleClef ? 'E4' : 'G2', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'E4' : 'G2'] || null, ledger: false }"></app-line-or-space>
+
+  <!-- rests -->
+  <div class="rest-wrapper">
+    <div *ngFor="let rest of restData; let i = index">
+      <img
+        *ngIf="rest !== null"
+        class="quarter-rest"
+        src="../../../assets/quarter-rest.png"
+        [ngStyle]="{ 'left.%': ((100 / measureData.timeSignature.top) * i) + 5 }"
+      >
+    </div>
+  </div>
 </div>
 <!-- below staff -->
 <div [ngClass]="measureData.measureNumber === 1 ? 'first-measure-wrapper-below-staff' : 'measure-wrapper-below-staff'">

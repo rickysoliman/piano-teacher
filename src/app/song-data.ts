@@ -1,5 +1,37 @@
 import { Song } from "./types";
 
+export const songWithQuarterRests: Song = {
+  title: 'Quarter Rests',
+  composer: 'You', // Replace with your name or desired composer
+  bpm: 100,
+  timeSignature: { top: 4, bottom: 4 },
+  trebleClef: true,
+  measures: [
+    {
+      timeSignature: { top: 4, bottom: 4 },
+      trebleClef: true,
+      measureNumber: 1,
+      notes: [
+        { duration: 1, name: 'C', octave: 4, beat: 1 },
+        { duration: 1, name: 'rest', octave: null, beat: 2 },
+        { duration: 1, name: 'C', octave: 4, beat: 3 },
+        { duration: 1, name: 'rest', octave: null, beat: 4 },
+      ],
+    },
+    {
+      timeSignature: { top: 4, bottom: 4 },
+      trebleClef: true,
+      measureNumber: 2,
+      notes: [
+        { duration: 1, name: 'E', octave: 4, beat: 1 },
+        { duration: 1, name: 'D', octave: 4, beat: 2 },
+        { duration: 1, name: 'C', octave: 4, beat: 3 },
+        { duration: 1, name: 'rest', octave: null, beat: 4 },
+      ],
+    },
+  ],
+};
+
 export const wholeNotecMajorScale: Song = {
   title: 'C Major Scale (Bass Clef)',
   composer: 'You', // Replace with your name or desired composer
