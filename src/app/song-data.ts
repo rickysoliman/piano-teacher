@@ -1,7 +1,62 @@
 import { Song } from "./types";
 
+export const songWithMixedNotesAndRests: Song = {
+  title: 'Mixed Notes and Rests',
+  composer: 'ChatGPT',
+  bpm: 120,
+  timeSignature: { top: 4, bottom: 4 },
+  trebleClef: false, // Using bass clef
+  measures: [
+    {
+      timeSignature: { top: 4, bottom: 4 },
+      trebleClef: false, // Using bass clef
+      measureNumber: 1,
+      notes: [
+        { duration: 4, name: 'rest', octave: null, beat: 1 }, // Whole rest on beat 1
+      ],
+    },
+    {
+      timeSignature: { top: 4, bottom: 4 },
+      trebleClef: false, // Using bass clef
+      measureNumber: 2,
+      notes: [
+        { duration: 1, name: 'A', octave: 3, beat: 1 }, // Quarter note A3 on beat 1
+        { duration: 1, name: 'rest', octave: null, beat: 2 }, // Quarter rest on beat 2
+        { duration: 1, name: 'B', octave: 3, beat: 3 }, // Quarter note B3 on beat 3
+        { duration: 1, name: 'C', octave: 3, beat: 4 }, // Quarter note C3 on beat 4
+      ],
+    },
+    {
+      timeSignature: { top: 4, bottom: 4 },
+      trebleClef: false, // Using bass clef
+      measureNumber: 3,
+      notes: [
+        { duration: 2, name: 'rest', octave: null, beat: 1 }, // Half rest on beat 1
+        { duration: 2, name: 'D', octave: 3, beat: 3 }, // Half note D3 on beat 3
+      ],
+    },
+    {
+      timeSignature: { top: 4, bottom: 4 },
+      trebleClef: false, // Using bass clef
+      measureNumber: 4,
+      notes: [
+        { duration: 2, name: 'E', octave: 3, beat: 1 }, // Half note E3 on beat 1
+        { duration: 2, name: 'rest', octave: null, beat: 3 }, // Half rest on beat 3
+      ],
+    },
+    {
+      timeSignature: { top: 4, bottom: 4 },
+      trebleClef: false, // Using bass clef
+      measureNumber: 5,
+      notes: [
+        { duration: 4, name: 'F', octave: 3, beat: 1 }, // Whole note F3 on beat 1
+      ],
+    },
+  ],
+};
+
 export const songWithHalfAndWholeRests: Song = {
-  title: 'Quarter Rests',
+  title: 'Whole and Half Rests',
   composer: 'You', // Replace with your name or desired composer
   bpm: 100,
   timeSignature: { top: 4, bottom: 4 },
