@@ -142,7 +142,8 @@ export const twinkleTwinkleLittleStar: Song = {
       notes: [
         { duration: 1, name: 'A', octave: 4, beat: 1 },
         { duration: 1, name: 'A', octave: 4, beat: 2 },
-        { duration: 2, name: 'G', octave: 4, beat: 3 },
+        { duration: 1, name: 'G', octave: 4, beat: 3 },
+        { duration: 1, name: 'rest', octave: null, beat: 4 },
       ],
     },
     // Measure 3
@@ -165,7 +166,8 @@ export const twinkleTwinkleLittleStar: Song = {
       notes: [
         { duration: 1, name: 'D', octave: 4, beat: 1 },
         { duration: 1, name: 'D', octave: 4, beat: 2 },
-        { duration: 2, name: 'C', octave: 4, beat: 3 },
+        { duration: 1, name: 'C', octave: 4, beat: 3 },
+        { duration: 1, name: 'rest', octave: null, beat: 4 },
       ],
     },
     // Measure 5
@@ -188,7 +190,8 @@ export const twinkleTwinkleLittleStar: Song = {
       notes: [
         { duration: 1, name: 'E', octave: 4, beat: 1 },
         { duration: 1, name: 'E', octave: 4, beat: 2 },
-        { duration: 2, name: 'D', octave: 4, beat: 3 },
+        { duration: 1, name: 'D', octave: 4, beat: 3 },
+        { duration: 1, name: 'rest', octave: null, beat: 4 },
       ],
     },
     // Measure 6
@@ -211,7 +214,8 @@ export const twinkleTwinkleLittleStar: Song = {
       notes: [
         { duration: 1, name: 'E', octave: 4, beat: 1 },
         { duration: 1, name: 'E', octave: 4, beat: 2 },
-        { duration: 2, name: 'D', octave: 4, beat: 3 },
+        { duration: 1, name: 'D', octave: 4, beat: 3 },
+        { duration: 1, name: 'rest', octave: null, beat: 4 },
       ],
     },
     // Measure 8
@@ -234,7 +238,8 @@ export const twinkleTwinkleLittleStar: Song = {
       notes: [
         { duration: 1, name: 'A', octave: 4, beat: 1 },
         { duration: 1, name: 'A', octave: 4, beat: 2 },
-        { duration: 2, name: 'G', octave: 4, beat: 3 },
+        { duration: 1, name: 'G', octave: 4, beat: 3 },
+        { duration: 1, name: 'rest', octave: null, beat: 4 },
       ],
     },
     // Measure 10
