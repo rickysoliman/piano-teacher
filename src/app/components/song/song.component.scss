@@ -15,10 +15,14 @@
   max-width: 100%;
 }
 
-.grand-staff-wrapper {
+.side-borders {
+  position: absolute;
+  margin-top: 42px;
+  width: 100%;
+  height: 264px;
   border-left: 2px solid black;
   border-right: 2px solid black;
-  margin-right: -2px;
+  margin-left: -2px;
 }
 
 .song-measure, .first-song-measure {

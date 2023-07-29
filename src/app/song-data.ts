@@ -61,6 +61,58 @@ export const grandStaffSong: Song = {
         },
       ],
     },
+    {
+      trebleClef: true,
+      timeSignature: { top: 4, bottom: 4 },
+      measureNumber: 5,
+      notes: [
+        {
+          name: 'E',
+          octave: 4,
+          duration: 4,
+          beat: 1,
+        },
+      ],
+    },
+    {
+      trebleClef: true,
+      timeSignature: { top: 4, bottom: 4 },
+      measureNumber: 6,
+      notes: [
+        {
+          name: 'C',
+          octave: 4,
+          duration: 4,
+          beat: 1,
+        },
+      ],
+    },
+    {
+      trebleClef: true,
+      timeSignature: { top: 4, bottom: 4 },
+      measureNumber: 7,
+      notes: [
+        {
+          name: 'E',
+          octave: 4,
+          duration: 4,
+          beat: 1,
+        },
+      ],
+    },
+    {
+      trebleClef: true,
+      timeSignature: { top: 4, bottom: 4 },
+      measureNumber: 8,
+      notes: [
+        {
+          name: 'C',
+          octave: 4,
+          duration: 4,
+          beat: 1,
+        },
+      ],
+    },
   ],
   leftHandMeasures: [
     {
@@ -106,6 +158,58 @@ export const grandStaffSong: Song = {
       trebleClef: false,
       timeSignature: { top: 4, bottom: 4 },
       measureNumber: 4,
+      notes: [
+        {
+          name: 'E',
+          octave: 3,
+          duration: 4,
+          beat: 1,
+        },
+      ],
+    },
+    {
+      trebleClef: false,
+      timeSignature: { top: 4, bottom: 4 },
+      measureNumber: 5,
+      notes: [
+        {
+          name: 'C',
+          octave: 3,
+          duration: 4,
+          beat: 1,
+        },
+      ],
+    },
+    {
+      trebleClef: false,
+      timeSignature: { top: 4, bottom: 4 },
+      measureNumber: 6,
+      notes: [
+        {
+          name: 'E',
+          octave: 3,
+          duration: 4,
+          beat: 1,
+        },
+      ],
+    },
+    {
+      trebleClef: false,
+      timeSignature: { top: 4, bottom: 4 },
+      measureNumber: 7,
+      notes: [
+        {
+          name: 'C',
+          octave: 3,
+          duration: 4,
+          beat: 1,
+        },
+      ],
+    },
+    {
+      trebleClef: false,
+      timeSignature: { top: 4, bottom: 4 },
+      measureNumber: 8,
       notes: [
         {
           name: 'E',
