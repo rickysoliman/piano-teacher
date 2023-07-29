@@ -22,6 +22,11 @@ export class MeasureComponent {
   };
 
   ngOnInit() {
+    console.log({ measureData: this.measureData });
+    this.generateNoteAndRestData();
+  }
+
+  generateNoteAndRestData() {
     this.restData = new Array(this.measureData.timeSignature.top).fill(null);
 
     this.measureData.notes.forEach(note => {

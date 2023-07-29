@@ -17,28 +17,32 @@ export type Rest = {
 };
 
 export type Note = {
-  duration: 4 | 2 | 1; // whole note, half note, quarter note
-  name: string; // must be capital A - G
+  name: string; // must be capital A - G or rest
   octave: number | null; // null if rest instead of note
+  duration: 4 | 2 | 1; // whole note, half note, quarter note
   beat: number;
 };
 
 export type Measure = {
-  notes: Note[];
-  timeSignature: TimeSignature;
-  measureNumber: number,
   trebleClef: boolean;
+  timeSignature: TimeSignature;
+  measureNumber: number;
+  notes: Note[];
 };
 
 type TimeSignature = {
-  top: number,
-  bottom: number,
+  top: number;
+  bottom: number;
 };
+
 export type Song = {
   title: string;
   composer: string;
   bpm: number;
   timeSignature: TimeSignature;
-  trebleClef: boolean;
-  measures: Measure[];
+  grandStaff: boolean;
+  rightHandTreble: boolean;
+  leftHandTreble?: boolean; // not present if grandStaff is false
+  rightHandMeasures: Measure[];
+  leftHandMeasures?: Measure[]; // not present if grandStaff is false
 };

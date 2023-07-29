@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { maryHadALittleLamb, cMajorScale, greensleeves, twinkleTwinkleLittleStar, wholeNotecMajorScale, songWithHalfAndWholeRests, songWithMixedNotesAndRests } from './song-data';
+import { grandStaffSong } from './song-data';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,5 @@ import { maryHadALittleLamb, cMajorScale, greensleeves, twinkleTwinkleLittleStar
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  song = songWithMixedNotesAndRests;
+  song = grandStaffSong;
 }
