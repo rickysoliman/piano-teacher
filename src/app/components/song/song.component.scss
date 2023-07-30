@@ -25,6 +25,22 @@
   margin-left: -2px;
 }
 
+.side-borders::after {
+  content: "";
+  position: absolute;
+  height: 264px;
+  right: -55%;
+  top: 50%;
+}
+
+.bracket {
+  position: absolute;
+  left: -35px;
+  height: 263px;
+  width: 33px;
+  margin-top: 42px;
+}
+
 .song-measure, .first-song-measure {
   flex-basis: calc(25% - 16px);
   max-width: calc(25% - 16px);
@@ -130,12 +146,6 @@
 .time-signature-top {
   margin-bottom: -23px;
 }
-
-// .grand-staff-wrapper {
-//   display: flex;
-//   flex-direction: column;
-//   width: 100%;
-// }
 
 .right-hand-measures, .left-hand-measures {
   display: flex;

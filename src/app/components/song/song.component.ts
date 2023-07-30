@@ -8,4 +8,5 @@ import { Song } from 'src/app/types';
 })
 export class SongComponent {
   @Input() song!: Song;
+  curlyBrace: string = '{';
 }

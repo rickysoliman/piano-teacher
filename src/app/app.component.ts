@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { grandStaffSong } from './song-data';
+import { grandStaffSong, twinkleTwinkleLittleStar } from './song-data';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,5 @@ import { grandStaffSong } from './song-data';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  song = grandStaffSong;
+  song = twinkleTwinkleLittleStar;
 }
