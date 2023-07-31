@@ -1,3 +1,9 @@
+type Option = {
+  name: string;
+  path: string;
+  selected: boolean;
+};
+
 export const cursorOptions = {
   notes: [
     {

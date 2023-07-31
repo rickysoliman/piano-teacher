@@ -10,7 +10,8 @@ import { cursorOptions } from './song.constants';
 export class SongComponent {
   @Input() song!: Song;
   grandStaffRows: any = [];
-  cursorOptions = cursorOptions;
+  cursorOptions: any = cursorOptions;
+  selectedCursorOption: string | null = null;
 
   ngOnInit() {
     if (this.song.grandStaff) {
@@ -45,5 +46,7 @@ export class SongComponent {
     });
 
     option.selected = !option.selected;
+    this.selectedCursorOption = option.name;
+    console.log({ selectedCursorOption: this.selectedCursorOption });
   }
 }
