@@ -27,66 +27,73 @@
         </div>
       </div>
 
-      <div [ngClass]="measure.measureNumber === 1 ? 'first-song-measure' : 'song-measure'" *ngFor="let measure of song.rightHandMeasures">
+      <div [ngClass]="measure.measureNumber % 4 === 1 ? 'first-song-measure' : 'song-measure'" *ngFor="let measure of song.rightHandMeasures">
         <app-measure [measureData]="measure"></app-measure>
       </div>
     </ng-template>
 
     <ng-template #grandStaff>
-      <div class="side-borders"></div>
-      <div class="grand-staff-wrapper">
-        <img class="bracket" src="../../../assets/bracket.png">
-        <div class="right-hand-measures">
-          <!-- the clef and the lines / spaces behind it -->
-          <div class="grand-staff-clef-measure-wrapper">
-            <div class="clef-line"></div>
-            <div class="clef-space"></div>
-            <div class="clef-line"></div>
-            <div class="clef-space"></div>
-            <div class="clef-line"></div>
-            <div class="clef-space"></div>
-            <div class="clef-line"></div>
-            <div class="clef-space"></div>
-            <div class="clef-line"></div>
+      <div class="grand-staff-container">
+        <div class="grand-staff-wrapper">
 
-            <div class="clef-wrapper">
-              <ng-container *ngTemplateOutlet="song.rightHandTreble ? treble : bass"></ng-container>
+          <!-- Loop through rows -->
+          <div *ngFor="let row of grandStaffRows" class="grand-staff-row">
+            <div class="side-borders"></div>
+            <img class="bracket" src="../../../assets/bracket.png">
+
+            <!-- Right-hand measures in the current row -->
+            <div class="right-hand-measures">
+              <!-- the clef and the lines / spaces behind it -->
+              <div class="grand-staff-clef-measure-wrapper">
+                <div class="clef-line"></div>
+                <div class="clef-space"></div>
+                <div class="clef-line"></div>
+                <div class="clef-space"></div>
+                <div class="clef-line"></div>
+                <div class="clef-space"></div>
+                <div class="clef-line"></div>
+                <div class="clef-space"></div>
+                <div class="clef-line"></div>
+                <div class="clef-wrapper">
+                  <ng-container *ngTemplateOutlet="song.rightHandTreble ? treble : bass"></ng-container>
+                </div>
+                <div class="time-signature-wrapper">
+                  <div class="time-signature-top">{{ song.timeSignature.top }}</div>
+                  <div class="time-signature-bottom">{{ song.timeSignature.bottom }}</div>
+                </div>
+              </div>
+
+              <div *ngFor="let measure of row.rightHandMeasures" [ngClass]="measure.measureNumber % 4 === 1 ? 'first-song-measure' : 'song-measure'">
+                <app-measure [measureData]="measure"></app-measure>
+              </div>
             </div>
-            <div class="time-signature-wrapper">
-              <div class="time-signature-top">{{ song.timeSignature.top }}</div>
-              <div class="time-signature-bottom">{{ song.timeSignature.bottom }}</div>
+
+            <!-- Left-hand measures in the current row -->
+            <div class="left-hand-measures">
+              <!-- the clef and the lines / spaces behind it -->
+              <div class="grand-staff-clef-measure-wrapper">
+                <div class="clef-line"></div>
+                <div class="clef-space"></div>
+                <div class="clef-line"></div>
+                <div class="clef-space"></div>
+                <div class="clef-line"></div>
+                <div class="clef-space"></div>
+                <div class="clef-line"></div>
+                <div class="clef-space"></div>
+                <div class="clef-line"></div>
+                <div class="clef-wrapper">
+                  <ng-container *ngTemplateOutlet="song.leftHandTreble ? treble : bass"></ng-container>
+                </div>
+                <div class="time-signature-wrapper">
+                  <div class="time-signature-top">{{ song.timeSignature.top }}</div>
+                  <div class="time-signature-bottom">{{ song.timeSignature.bottom }}</div>
+                </div>
+              </div>
+
+              <div *ngFor="let measure of row.leftHandMeasures" [ngClass]="measure.measureNumber % 4 === 1 ? 'first-song-measure' : 'song-measure'">
+                <app-measure [measureData]="measure"></app-measure>
+              </div>
             </div>
-          </div>
-
-          <div [ngClass]="measure.measureNumber === 1 ? 'first-song-measure' : 'song-measure'" *ngFor="let measure of song.rightHandMeasures">
-            <app-measure [measureData]="measure"></app-measure>
-          </div>
-        </div>
-
-        <div class="left-hand-measures">
-          <!-- the clef and the lines / spaces behind it -->
-          <div class="grand-staff-clef-measure-wrapper">
-            <div class="clef-line"></div>
-            <div class="clef-space"></div>
-            <div class="clef-line"></div>
-            <div class="clef-space"></div>
-            <div class="clef-line"></div>
-            <div class="clef-space"></div>
-            <div class="clef-line"></div>
-            <div class="clef-space"></div>
-            <div class="clef-line"></div>
-
-            <div class="clef-wrapper">
-              <ng-container *ngTemplateOutlet="song.leftHandTreble ? treble : bass"></ng-container>
-            </div>
-            <div class="time-signature-wrapper">
-              <div class="time-signature-top">{{ song.timeSignature.top }}</div>
-              <div class="time-signature-bottom">{{ song.timeSignature.bottom }}</div>
-            </div>
-          </div>
-
-          <div [ngClass]="measure.measureNumber === 1 ? 'first-song-measure' : 'song-measure'" *ngFor="let measure of song.leftHandMeasures">
-            <app-measure [measureData]="measure"></app-measure>
           </div>
         </div>
       </div>

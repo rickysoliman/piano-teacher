@@ -1,10 +1,10 @@
 <!-- above staff -->
-<div [ngClass]="measureData.measureNumber === 1 ? 'first-measure-wrapper-above-staff' : 'measure-wrapper-above-staff'">
+<div [ngClass]="measureData.measureNumber % 4 === 1 ? 'first-measure-wrapper-above-staff' : 'measure-wrapper-above-staff'">
   <app-line-or-space [lineOrSpaceData]="{ isLine: true, id: measureData.trebleClef ? 'A5' : 'C4', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'A5' : 'C4'] || null, ledger: true }"></app-line-or-space>
   <app-line-or-space [lineOrSpaceData]="{ isLine: false, id: measureData.trebleClef ? 'G5' : 'B3', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'G5' : 'B3']  || null, ledger: true }"></app-line-or-space>
 </div>
 <!-- main staff -->
-<div [ngClass]="measureData.measureNumber === 1 ? 'first-measure-wrapper' : 'measure-wrapper'">
+<div [ngClass]="measureData.measureNumber % 4 === 1 ? 'first-measure-wrapper' : 'measure-wrapper'">
   <app-line-or-space [lineOrSpaceData]="{ isLine: true, id: measureData.trebleClef ? 'F5' : 'A3', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'F5' : 'A3'] || null, ledger: false }"></app-line-or-space>
   <app-line-or-space [lineOrSpaceData]="{ isLine: false, id: measureData.trebleClef ? 'E5' : 'G3', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'E5' : 'G3']  || null, ledger: false }"></app-line-or-space>
   <app-line-or-space [lineOrSpaceData]="{ isLine: true, id: measureData.trebleClef ? 'D5' : 'F3', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'D5' : 'F3'] || null, ledger: false }"></app-line-or-space>
@@ -28,7 +28,7 @@
   </div>
 </div>
 <!-- below staff -->
-<div [ngClass]="measureData.measureNumber === 1 ? 'first-measure-wrapper-below-staff' : 'measure-wrapper-below-staff'">
+<div [ngClass]="measureData.measureNumber % 4 === 1 ? 'first-measure-wrapper-below-staff' : 'measure-wrapper-below-staff'">
   <app-line-or-space [lineOrSpaceData]="{ isLine: false, id: measureData.trebleClef ? 'D4' : 'F2', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'D4' : 'F2']  || null, ledger: true }"></app-line-or-space>
   <app-line-or-space [lineOrSpaceData]="{ isLine: true, id: measureData.trebleClef ? 'C4' : 'E2', timeSignature: measureData.timeSignature, contents: noteData[measureData.trebleClef ? 'C4' : 'E2'] || null, ledger: true }"></app-line-or-space>
 </div>

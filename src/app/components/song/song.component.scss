@@ -8,6 +8,7 @@
 .song-measures, .grand-staff-wrapper {
   position: relative;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
@@ -31,6 +32,11 @@
   height: 264px;
   right: -55%;
   top: 50%;
+}
+
+.grand-staff-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .bracket {
@@ -110,7 +116,7 @@
 }
 
 .grand-staff-clef-measure-wrapper {
-  border-left: none;
+  border-right: none;
 }
 
 .clef-wrapper {
@@ -145,6 +151,13 @@
 
 .time-signature-top {
   margin-bottom: -23px;
+}
+
+.grand-staff-row {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .right-hand-measures, .left-hand-measures {

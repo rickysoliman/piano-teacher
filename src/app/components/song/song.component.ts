@@ -8,5 +8,27 @@ import { Song } from 'src/app/types';
 })
 export class SongComponent {
   @Input() song!: Song;
-  curlyBrace: string = '{';
+  grandStaffRows: any = [];
+
+  ngOnInit() {
+    if (this.song.grandStaff) {
+      this.groupMeasuresIntoRows();
+    }
+  }
+
+  groupMeasuresIntoRows() {
+    const measuresPerRow = 4;
+    const { rightHandMeasures } = this.song;
+    const { leftHandMeasures } = this.song;
+
+    for (let i = 0; i < rightHandMeasures.length; i += measuresPerRow) {
+      const row = {
+        rightHandMeasures: rightHandMeasures.slice(i, i + measuresPerRow),
+        leftHandMeasures: leftHandMeasures!.slice(i, i + measuresPerRow),
+      };
+
+      this.grandStaffRows.push(row);
+    }
+    console.log({ grandStaffRows: this.grandStaffRows });
+  }
 }
