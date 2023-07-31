@@ -5,6 +5,77 @@
   justify-content: center;
 }
 
+.toolbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.cursor-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.notes,
+.rests {
+  display: flex;
+}
+
+.toolbar-button, .cursor-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 50px;
+  border-radius: 10%;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.toolbar-button.selected {
+  background-color: #a1e4ff; /* Change to the color you want for selected buttons */
+  border-color: #1a73e8; /* Change to the border color you want for selected buttons */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Optional: Add a box shadow to selected buttons */
+}
+
+.toolbar-button img {
+  width: auto;
+  height: 35px;
+}
+
+.toolbar-button:hover {
+  background-color: #ddd;
+  border-color: #aaa;
+}
+
+.cursor-option.selected {
+  background-color: #a1e4ff; /* Change to the color you want for selected buttons */
+  border-color: #1a73e8; /* Change to the border color you want for selected buttons */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Optional: Add a box shadow to selected buttons */
+}
+
+.add-or-remove-measure {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.add-or-remove-measure-button {
+  font-size: 2em;
+}
+
+.song-header {
+  font-family:'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .song-measures, .grand-staff-wrapper {
   position: relative;
   display: flex;

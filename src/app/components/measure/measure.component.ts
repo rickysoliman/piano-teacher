@@ -22,7 +22,6 @@ export class MeasureComponent {
   };
 
   ngOnInit() {
-    console.log({ measureData: this.measureData });
     this.generateNoteAndRestData();
   }
 
@@ -43,7 +42,6 @@ export class MeasureComponent {
         });
       }
     });
-    console.log({ noteData: this.noteData, restData: this.restData });
   }
 
   getRestStyles(index: number): any {
