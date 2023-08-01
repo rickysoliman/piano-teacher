@@ -31,14 +31,18 @@ export class SongComponent {
     const { rightHandMeasures } = this.song;
     const { leftHandMeasures } = this.song;
 
+    const newGrandStaffRows = [];
+
     for (let i = 0; i < rightHandMeasures.length; i += measuresPerRow) {
       const row = {
         rightHandMeasures: rightHandMeasures.slice(i, i + measuresPerRow),
         leftHandMeasures: leftHandMeasures!.slice(i, i + measuresPerRow),
       };
 
-      this.grandStaffRows.push(row);
+      newGrandStaffRows.push(row);
     }
+
+    this.grandStaffRows = newGrandStaffRows;
   }
 
   selectOption(option: any) {
@@ -70,8 +74,7 @@ export class SongComponent {
       };
 
       this.song.rightHandMeasures[measureNumber - 1].notes[beat - 1] = newNote;
-      this.cdRef.markForCheck();
-      console.log({ song: this.song });
+      this.groupMeasuresIntoRows();
     }
   }
 }
