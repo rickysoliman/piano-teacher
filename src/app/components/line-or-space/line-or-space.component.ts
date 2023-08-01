@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { LineOrSpace, NoteOrRestData } from 'src/app/types';
 
 @Component({
@@ -8,6 +8,8 @@ import { LineOrSpace, NoteOrRestData } from 'src/app/types';
 })
 export class LineOrSpaceComponent {
   @Input() lineOrSpaceData!: LineOrSpace;
+  @Input() selectedCursorOption!: string | null;
+  @Output() addNoteEvent = new EventEmitter<any>();
   beatData: any = {};
   imagePaths: any = {
     '1': '../../../assets/quarter-note.png',
@@ -34,12 +36,19 @@ export class LineOrSpaceComponent {
     return Array.from({ length: num }, (_, index) => index);
   }
 
-  getWidth(timeSignature: number): string {
-    const widthPercentage = 100 / timeSignature;
-    return `${widthPercentage}%`;
+  hasNoteOnBeat(beat: any): boolean {
+    if (this.lineOrSpaceData.contents && Array.isArray(this.lineOrSpaceData.contents)) {
+      return this.lineOrSpaceData.contents.some((note) => note['beat'] === beat);
+    }
+    return false;
   }
 
-  hasNoteOnBeat(beat: any): boolean {
-    return this.lineOrSpaceData.contents?.some((note) => note['beat'] === beat);
+  addNote(event: Event, beat: number) {
+    if (this.selectedCursorOption) {
+      this.addNoteEvent.emit({
+        id: this.lineOrSpaceData.id,
+        beat,
+      });
+    }
   }
 }

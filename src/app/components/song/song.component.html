@@ -48,7 +48,7 @@
       </div>
 
       <div [ngClass]="measure.measureNumber % 4 === 1 ? 'first-song-measure' : 'song-measure'" *ngFor="let measure of song.rightHandMeasures">
-        <app-measure [measureData]="measure"></app-measure>
+        <app-measure (addNoteEvent)="addNote($event)" [measureData]="measure" [selectedCursorOption]="selectedCursorOption"></app-measure>
       </div>
     </ng-template>
 
@@ -84,7 +84,7 @@
               </div>
 
               <div *ngFor="let measure of row.rightHandMeasures" [ngClass]="measure.measureNumber % 4 === 1 ? 'first-song-measure' : 'song-measure'">
-                <app-measure [measureData]="measure"></app-measure>
+                <app-measure (addNoteEvent)="addNote($event)" [measureData]="measure" [selectedCursorOption]="selectedCursorOption"></app-measure>
               </div>
             </div>
 
@@ -111,7 +111,7 @@
               </div>
 
               <div *ngFor="let measure of row.leftHandMeasures" [ngClass]="measure.measureNumber % 4 === 1 ? 'first-song-measure' : 'song-measure'">
-                <app-measure [measureData]="measure"></app-measure>
+                <app-measure (addNoteEvent)="addNote($event)" [measureData]="measure" [selectedCursorOption]="selectedCursorOption"></app-measure>
               </div>
             </div>
           </div>

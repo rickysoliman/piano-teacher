@@ -15,7 +15,7 @@
     </ng-template>
 
     <ng-template #noNote>
-      <div [ngClass]="lineOrSpaceData.ledger ? (lineOrSpaceData.isLine ? 'ledger-line' : 'space') : (lineOrSpaceData.isLine ? 'line' : 'space')"></div>
+      <div (click)="addNote($event, beat + 1)" [ngClass]="lineOrSpaceData.ledger ? (lineOrSpaceData.isLine ? 'ledger-line' : 'space') : (lineOrSpaceData.isLine ? 'line' : 'space')"></div>
     </ng-template>
 
     <ng-container *ngTemplateOutlet="hasNoteOnBeat(beat + 1) ? note : noNote"></ng-container>

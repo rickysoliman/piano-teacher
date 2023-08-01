@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { Song } from 'src/app/types';
+import { ChangeDetectorRef, Component, Input } from '@angular/core';
+import { Measure, Note, Song } from 'src/app/types';
 import { cursorOptions } from './song.constants';
 
 @Component({
@@ -12,6 +12,13 @@ export class SongComponent {
   grandStaffRows: any = [];
   cursorOptions: any = cursorOptions;
   selectedCursorOption: string | null = null;
+  durations: any = {
+    'quarter': 1,
+    'half': 2,
+    'whole': 4,
+  };
+
+  constructor(private cdRef: ChangeDetectorRef) {}
 
   ngOnInit() {
     if (this.song.grandStaff) {
@@ -47,6 +54,24 @@ export class SongComponent {
 
     option.selected = !option.selected;
     this.selectedCursorOption = option.name;
-    console.log({ selectedCursorOption: this.selectedCursorOption });
+  }
+
+  addNote(data: any) {
+    if (this.selectedCursorOption) {
+      const { measureNumber, beat, id } = data.noteData;
+      const octave = Number(id[1]);
+      const name = id[0];
+
+      const newNote: Note = {
+        name,
+        octave,
+        duration: this.durations[this.selectedCursorOption],
+        beat,
+      };
+
+      this.song.rightHandMeasures[measureNumber - 1].notes[beat - 1] = newNote;
+      this.cdRef.markForCheck();
+      console.log({ song: this.song });
+    }
   }
 }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Measure, Note, NoteOrRestData, Rest } from 'src/app/types';
 
 @Component({
@@ -8,6 +8,8 @@ import { Measure, Note, NoteOrRestData, Rest } from 'src/app/types';
 })
 export class MeasureComponent {
   @Input() measureData!: Measure;
+  @Input() selectedCursorOption!: string | null;
+  @Output() addNoteEvent = new EventEmitter<any>();
   noteData: any = {};
   restData: any = [];
   restImagePaths: any = {
@@ -70,5 +72,22 @@ export class MeasureComponent {
     const position = linePositionMap[nameAndOctave] || spacePositionMap[nameAndOctave];
 
     return position || '0';
+  }
+
+  addNote(event: any) {
+    console.log({ event });
+    const newNoteData = { ...event, measureNumber: this.measureData.measureNumber };
+    const { beat } = newNoteData;
+    console.log({ newNoteData });
+
+    this.noteData[newNoteData.id] = {
+      duration: this.selectedCursorOption === 'quarter' ? 1 : this.selectedCursorOption === 'half' ? 2 : 4,
+      beat,
+    };
+    console.log('line 87', { noteData: this.noteData });
+
+    this.addNoteEvent.emit({
+      noteData: newNoteData,
+    });
   }
 }

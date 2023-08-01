@@ -13,13 +13,13 @@ export type LineOrSpace = {
 };
 
 export type Rest = {
-  duration: 4 | 2 | 1;
+  duration: number;
 };
 
 export type Note = {
   name: string; // must be capital A - G or rest
   octave: number | null; // null if rest instead of note
-  duration: 4 | 2 | 1; // whole note, half note, quarter note
+  duration: number; // whole note, half note, quarter note
   beat: number;
 };
 
